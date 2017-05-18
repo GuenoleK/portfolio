@@ -51,8 +51,18 @@ export class Layout extends PureComponent {
         return(
             <div data-component="layout" id="layout">
                 <div data-component="header" id="header-layout" className={`${this.state.headerClassName}`}>
-                    <div className="header-content">
-                        header
+                    <div data-component="header-content">
+                        <div data-component="header-left-content">
+                            menu items
+                        </div>
+                        <div data-component="header-right-content">
+                            <button className="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
+                                <i className="fa fa-linkedin-square" aria-hidden="true"></i>
+                            </button>
+                            <button className="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
+                                <i className="fa fa-github" aria-hidden="true"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
                 <button 

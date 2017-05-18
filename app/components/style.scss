@@ -51,3 +51,22 @@
         text-align: center;
     }
 }
+
+[data-component="header-content"] {
+    display: flex;
+    height: 100%;
+    align-items: center;
+
+    [data-component="header-left-content"] {
+        display: flex;
+        flex: 1;
+        padding-left: 75px;
+    }
+
+    [data-component="header-right-content"] {
+        display: flex;
+        flex: 1;
+        justify-content: flex-end;
+        padding-right: 120px;
+    }
+}
