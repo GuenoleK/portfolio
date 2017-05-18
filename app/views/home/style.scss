@@ -5,23 +5,28 @@
     height: 100%;
     flex: 1;
 
+    [data-component="home-intro"] {
+        height: 300px;
+        background-color: rosybrown;
+    }
+
     [data-component="home-about-me"] {
-        flex: 1;
+        height: 300px;
         background-color: purple;
     }
 
     [data-component="home-my-skills"] {
-        flex: 1;
+        height: 300px;
         background-color: mediumseagreen;
     }
 
     [data-component="home-my-achievements"] {
-        flex: 1;
+        height: 300px;
         background-color: cyan;
     }
 
     [data-component="home-my-career"] {
-        flex: 1;
+        height: 300px;
         background-color: peru;
     }
 }
