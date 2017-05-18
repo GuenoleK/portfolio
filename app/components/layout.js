@@ -40,26 +40,38 @@ export class Layout extends PureComponent {
             this.setState({headerClassName: "header-nav-up", buttonClassPosition: "header-button-up"})
         } else {
             // Scroll Up
-            console.log('ST', st);
             this.setState({headerClassName: "header-nav-down", buttonClassPosition: "header-button-down"})
         }
         this.setState({lastScrollTop: st});
     }
 
     render() {
-        console.log(this.state);
         return(
             <div data-component="layout" id="layout">
                 <div data-component="header" id="header-layout" className={`${this.state.headerClassName}`}>
                     <div data-component="header-content">
                         <div data-component="header-left-content">
-                            menu items
+                            <button className="mdl-button mdl-js-button mdl-js-ripple-effect">
+                                Accueil
+                            </button>
+                            <button className="mdl-button mdl-js-button mdl-js-ripple-effect">
+                                Qui suis-je ?
+                            </button>
+                            <button className="mdl-button mdl-js-button mdl-js-ripple-effect">
+                                Mes compétences
+                            </button>
+                            <button className="mdl-button mdl-js-button mdl-js-ripple-effect">
+                                Mes projets
+                            </button>
+                            <button className="mdl-button mdl-js-button mdl-js-ripple-effect">
+                                Mon expérience
+                            </button>
                         </div>
                         <div data-component="header-right-content">
-                            <button className="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
+                            <button className="mdl-button mdl-js-button mdl-button--icon">
                                 <i className="fa fa-linkedin-square" aria-hidden="true"></i>
                             </button>
-                            <button className="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
+                            <button className="mdl-button mdl-js-button mdl-button--icon">
                                 <i className="fa fa-github" aria-hidden="true"></i>
                             </button>
                         </div>
@@ -73,7 +85,6 @@ export class Layout extends PureComponent {
                         <i className="material-icons">email</i>
                 </button>
                 <div data-component="content">
-                    content
                     {this.props.children}
                 </div>
                 <footer data-component="footer">

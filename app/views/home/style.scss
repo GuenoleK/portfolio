@@ -1,0 +1,27 @@
+[data-component="home-container"] {
+    background-color: orange;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    flex: 1;
+
+    [data-component="home-about-me"] {
+        flex: 1;
+        background-color: purple;
+    }
+
+    [data-component="home-my-skills"] {
+        flex: 1;
+        background-color: mediumseagreen;
+    }
+
+    [data-component="home-my-achievements"] {
+        flex: 1;
+        background-color: cyan;
+    }
+
+    [data-component="home-my-career"] {
+        flex: 1;
+        background-color: peru;
+    }
+}

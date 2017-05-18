@@ -1,5 +1,7 @@
 [data-component="layout"] {
     background-color: blue;
+    display: flex;
+    flex-direction: column;
     min-height: 100%;
 
     [data-component="header"] {
@@ -36,8 +38,10 @@
     }
 
     [data-component="content"] {
-        padding-top: 101px;
-        height: 4000px;
+        padding-top: 75px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
     }
 
     [data-component="footer"] {
