@@ -46,6 +46,14 @@ export class Layout extends PureComponent {
         this.setState({lastScrollTop: st});
     }
 
+    goToMySocial = (url) => {
+        window.open(url);
+    }
+
+    emailMe = () => {
+        window.location.href = "mailto:kikabouguenole@gmail.com&subject=We want you !";
+    }
+
     render() {
         return(
             <div data-component="layout" id="layout">
@@ -69,10 +77,10 @@ export class Layout extends PureComponent {
                             </button>
                         </div>
                         <div data-component="header-right-content">
-                            <button className="mdl-button mdl-js-button mdl-button--icon">
+                            <button className="mdl-button mdl-js-button mdl-button--icon" onClick={() => this.goToMySocial("https://www.linkedin.com/in/kikabouguenole/")}>
                                 <i className="fa fa-linkedin-square" aria-hidden="true"></i>
                             </button>
-                            <button className="mdl-button mdl-js-button mdl-button--icon">
+                            <button className="mdl-button mdl-js-button mdl-button--icon" onClick={() => this.goToMySocial("https://github.com/GuenoleK")}>
                                 <i className="fa fa-github" aria-hidden="true"></i>
                             </button>
                         </div>
@@ -82,6 +90,7 @@ export class Layout extends PureComponent {
                     id="header-button" 
                     data-component="header-button"
                     className={`mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored ${this.state.buttonClassPosition}`}
+                    onClick={() => this.emailMe()}
                     >
                         <i className="material-icons">email</i>
                 </button>
