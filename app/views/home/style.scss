@@ -6,27 +6,37 @@
     flex: 1;
 
     [data-component="home-intro"] {
-        height: 300px;
-        background-color: rosybrown;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 800px;
+        background: url("../../assets/intro5.jpg") center 0 no-repeat fixed;
+    }
+
+    .home-intro {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 800px;
     }
 
     [data-component="home-about-me"] {
         height: 300px;
-        background-color: purple;
+        background: purple fixed;
     }
 
     [data-component="home-my-skills"] {
         height: 300px;
-        background-color: mediumseagreen;
+        background: mediumseagreen fixed;
     }
 
     [data-component="home-my-achievements"] {
         height: 300px;
-        background-color: cyan;
+        background: cyan fixed;
     }
 
     [data-component="home-my-career"] {
         height: 300px;
-        background-color: peru;
+        background: peru fixed;
     }
 }

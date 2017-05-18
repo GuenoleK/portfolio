@@ -12,7 +12,8 @@ export class Layout extends PureComponent {
             navbarHeight: 0,
             buttonClassPosition: "header-button-down",
             headerClassName: "header-nav-down",
-            headerPosition: "0px"
+            headerPosition: "0px",
+            updateMDL: false
         }
     }
 
@@ -80,7 +81,7 @@ export class Layout extends PureComponent {
                 <button 
                     id="header-button" 
                     data-component="header-button"
-                    className={`mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent ${this.state.buttonClassPosition}`}
+                    className={`mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored ${this.state.buttonClassPosition}`}
                     >
                         <i className="material-icons">email</i>
                 </button>
