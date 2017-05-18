@@ -7,6 +7,11 @@
         height: 75px;
         position: fixed;
         width: 100%;
+        transition: top 0.2s ease-in-out;
+    }
+
+    .header-nav-up {
+        top: -75px;
     }
 
     [data-component="header-button"] {
