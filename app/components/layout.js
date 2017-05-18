@@ -40,9 +40,9 @@ export class Layout extends PureComponent {
             this.setState({headerClassName: "header-nav-up", buttonClassPosition: "header-button-up"})
         } else {
             // Scroll Up
+            console.log('ST', st);
             this.setState({headerClassName: "header-nav-down", buttonClassPosition: "header-button-down"})
         }
-        console.log('HEADER', header);
         this.setState({lastScrollTop: st});
     }
 
