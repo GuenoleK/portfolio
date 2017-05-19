@@ -1,6 +1,6 @@
 import React, {PureComponent} from 'react';
 import "./style.scss";
-import {HeaderLink} from "./HeaderLink";
+import {HeaderLink} from "./headerLink";
 
 export class Layout extends PureComponent {
 
@@ -61,7 +61,7 @@ export class Layout extends PureComponent {
                 <div data-component="header" id="header-layout" className={`${this.state.headerClassName}`}>
                     <div data-component="header-content">
                         <div data-component="header-left-content">
-                            <HeaderLink to="/" className="mdl-button mdl-js-button mdl-js-ripple-effect header-link">
+                            <HeaderLink to="/" className="mdl-button mdl-js-button mdl-js-ripple-effect header-link" onlyActiveOnIndex={true}>
                                 Accueil
                             </HeaderLink>
                             <HeaderLink to="/about-me" className="mdl-button mdl-js-button mdl-js-ripple-effect header-link">

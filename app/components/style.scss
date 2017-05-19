@@ -93,9 +93,17 @@
         padding-right: 120px;
         color: white;
 
-        i:hover {
+        .mdl-button {
+            margin-right: 12px;
+        }
+        
+        .fa {
+            transition: color 0.25s ease-in-out;
+        }
+
+        .fa:hover {
             color: black;
-            transition: color 0.2s ease-in-out;
+            transition: color 0.3s ease-in-out;
         }
     }
 }

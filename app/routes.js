@@ -9,9 +9,8 @@ import {Layout} from './components/layout';
 export default {
     path: '/',
     component: Layout,
-    indexRoute:
-    {
-        onEnter: (({params}, replace) => { replace('home');})
+    indexRoute: {
+        component: HomeView
     },
     childRoutes:
     [
