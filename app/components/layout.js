@@ -1,5 +1,6 @@
 import React, {PureComponent} from 'react';
 import "./style.scss";
+import {HeaderLink} from "./HeaderLink";
 
 export class Layout extends PureComponent {
 
@@ -60,21 +61,21 @@ export class Layout extends PureComponent {
                 <div data-component="header" id="header-layout" className={`${this.state.headerClassName}`}>
                     <div data-component="header-content">
                         <div data-component="header-left-content">
-                            <button className="mdl-button mdl-js-button mdl-js-ripple-effect">
+                            <HeaderLink to="/" className="mdl-button mdl-js-button mdl-js-ripple-effect header-link">
                                 Accueil
-                            </button>
-                            <button className="mdl-button mdl-js-button mdl-js-ripple-effect">
+                            </HeaderLink>
+                            <HeaderLink to="/about-me" className="mdl-button mdl-js-button mdl-js-ripple-effect header-link">
                                 Qui suis-je ?
-                            </button>
-                            <button className="mdl-button mdl-js-button mdl-js-ripple-effect">
+                            </HeaderLink>
+                            <HeaderLink to="/my-skills" className="mdl-button mdl-js-button mdl-js-ripple-effect header-link">
                                 Mes compétences
-                            </button>
-                            <button className="mdl-button mdl-js-button mdl-js-ripple-effect">
-                                Mes projets
-                            </button>
-                            <button className="mdl-button mdl-js-button mdl-js-ripple-effect">
+                            </HeaderLink>
+                            <HeaderLink to="/my-achievements" className="mdl-button mdl-js-button mdl-js-ripple-effect header-link">
+                                Mes réalisations
+                            </HeaderLink>
+                            <HeaderLink to="my-career" className="mdl-button mdl-js-button mdl-js-ripple-effect header-link">
                                 Mon expérience
-                            </button>
+                            </HeaderLink>
                         </div>
                         <div data-component="header-right-content">
                             <button className="mdl-button mdl-js-button mdl-button--icon" onClick={() => this.goToMySocial("https://www.linkedin.com/in/kikabouguenole/")}>

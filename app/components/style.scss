@@ -1,17 +1,22 @@
+@import "../style/variables.scss";
+
 [data-component="layout"] {
-    background-color: blue;
     display: flex;
     flex-direction: column;
     min-height: 100%;
 
     [data-component="header"] {
-        background-color: red;
+        background-color: $primary;
         top: 0;
         height: 75px;
         position: fixed;
         width: 100%;
         transition: top 0.2s ease-in-out;
         z-index: 999;
+    }
+
+    [data-component="header-button"] {
+        background-color: $accent !important;
     }
 
     .header-nav-up {
@@ -45,14 +50,13 @@
         flex-direction: column;
     }
 
-    [data-component="footer"] {
-        background-color: green;
+    [data-component="er"] {
         position: fixed;
         right: 0;
         bottom: 0;
         left: 0;
         padding: 1rem;
-        background-color: #efefef;
+        background-color: $md-grey;
         text-align: center;
     }
 }
@@ -66,6 +70,20 @@
         display: flex;
         flex: 1;
         padding-left: 75px;
+
+        .mdl-button {
+            color: white;            
+        }
+
+        .mdl-button:hover {
+            background-color: white;
+            color: $primary;
+            transition: background-color .3s ease-in;
+        }
+
+        .header-link {
+            margin-right: 10px;
+        }
     }
 
     [data-component="header-right-content"] {
@@ -73,5 +91,11 @@
         flex: 1;
         justify-content: flex-end;
         padding-right: 120px;
+        color: white;
+
+        i:hover {
+            color: black;
+            transition: color 0.2s ease-in-out;
+        }
     }
 }
