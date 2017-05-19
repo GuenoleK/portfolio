@@ -1,6 +1,10 @@
 import React, {PureComponent} from 'react';
 import "./style.scss";
 import {HeaderLink} from "./headerLink";
+import DropDownMenu from 'material-ui/DropDownMenu';
+import MenuItem from 'material-ui/MenuItem';
+import ArrowDropRight from 'material-ui/svg-icons/navigation-arrow-drop-right';
+import Menu from 'material-ui/Menu';
 
 export class Layout extends PureComponent {
 
@@ -55,7 +59,17 @@ export class Layout extends PureComponent {
         window.location.href = "mailto:kikabouguenole@gmail.com&subject=We want you !";
     }
 
+    openMenu = () => {
+        console.log('Hello');
+        this.setState({open: true});
+    }
+
+    onHey = () => {
+        console.log('FNEOINFE');
+    }
+
     render() {
+        console.log("STATE", this.state);
         return(
             <div data-component="layout" id="layout">
                 <div data-component="header" id="header-layout" className={`${this.state.headerClassName}`}>
@@ -64,9 +78,17 @@ export class Layout extends PureComponent {
                             <HeaderLink to="/" className="mdl-button mdl-js-button mdl-js-ripple-effect header-link" onlyActiveOnIndex={true}>
                                 Accueil
                             </HeaderLink>
-                            <HeaderLink to="/about-me" className="mdl-button mdl-js-button mdl-js-ripple-effect header-link">
+                            
+                            <HeaderLink id="demo-menu-lower-left" to="/about-me" className="mdl-button mdl-js-button mdl-js-ripple-effect header-link">
                                 Qui suis-je ?
                             </HeaderLink>
+                            <ul className="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
+                                htmlFor="demo-menu-lower-left">
+                                <li className="mdl-menu__item">Some Action</li>
+                                <li className="mdl-menu__item mdl-menu__item--full-bleed-divider">Another Action</li>
+                                <li disabled className="mdl-menu__item">Disabled Action</li>
+                                <li className="mdl-menu__item">Yet Another Action</li>
+                            </ul>
                             <HeaderLink to="/my-skills" className="mdl-button mdl-js-button mdl-js-ripple-effect header-link">
                                 Mes compétences
                             </HeaderLink>

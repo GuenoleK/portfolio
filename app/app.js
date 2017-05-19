@@ -6,6 +6,7 @@ import routes from './routes';
 import Main from './main'; // Our custom react component
 import './style';
 import 'material-design-lite/dist/material';
+
 // Translation part
 import translation from 'i18next';
 import {french} from './config/translation/fr'

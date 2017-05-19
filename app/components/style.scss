@@ -68,11 +68,11 @@
 
     [data-component="header-left-content"] {
         display: flex;
-        flex: 1;
+        flex: 7;
         padding-left: 75px;
 
         .mdl-button {
-            color: white;            
+            color: white;      
         }
 
         .mdl-button:hover {
@@ -103,7 +103,12 @@
 
         .fa:hover {
             color: black;
-            transition: color 0.3s ease-in-out;
+            transition: color 0.25s ease-in-out;
         }
     }
+}
+
+.active-link {
+    background-color: white !important;
+    color: $primary !important;
 }
