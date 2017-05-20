@@ -1,17 +1,9 @@
 [data-component="home-container"] {
-    background-color: orange;
     display: flex;
     flex-direction: column;
     height: 100%;
     flex: 1;
     text-align: center;
-
-    .home-intro {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 600px;
-    }
 
     [data-component="home-about-me"], [data-component="home-my-skills"], 
     [data-component="home-my-achievements"], [data-component="home-my-career"]  {
@@ -19,6 +11,13 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
+    }
+
+    .home-intro {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 550px;
     }
 
     [data-component="home-about-me"] {
