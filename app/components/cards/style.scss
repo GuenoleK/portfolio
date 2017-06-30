@@ -1,0 +1,15 @@
+[data-component="portfolio-card"] {
+  margin: 0px 10px 10px 0px;
+
+  [data-component="card-title"] {
+    color: #fff !important;
+    height: 176px;
+    background: url('../../assets/welcome_card.jpg') center / cover;
+  }
+
+  [data-component="card-bottom"] {
+    > button {
+      width: 100%;
+    }
+  }
+}

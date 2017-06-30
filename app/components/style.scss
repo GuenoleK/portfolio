@@ -1,0 +1,125 @@
+@import "../style/variables.scss";
+
+[data-component="layout"] {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+
+    [data-component="header"] {
+        background-color: $primary;
+        top: 0;
+        height: 75px;
+        position: fixed;
+        width: 100%;
+        transition: top 0.2s ease-in-out;
+        z-index: 999;
+    }
+
+    [data-component="header-button"] {
+        background-color: $accent !important;
+    }
+
+    [data-component="footer"] {
+        background-color: green;		
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding: 1rem;
+        background-color: $md-grey;
+        text-align: center;
+    }
+
+    .header-nav-up {
+        top: -75px;
+    }
+
+    .header-nav-down {
+        top: 0px;
+    }
+
+    .header-button-up {
+        top: -70px !important;
+    }
+
+    .header-button-down {
+        top: 46px !important;
+    }
+
+    [data-component="header-button"] {
+        position: fixed;
+        right: 40px;
+        top: 46px;
+        z-index: 999;
+        transition: top 0.2s ease-in-out;
+    }
+
+    [data-component="content"] {
+        padding-top: 75px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    [data-component="er"] {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding: 1rem;
+        background-color: $md-grey;
+        text-align: center;
+    }
+}
+
+[data-component="header-content"] {
+    display: flex;
+    height: 100%;
+    align-items: center;
+
+    [data-component="header-left-content"] {
+        display: flex;
+        flex: 7;
+        padding-left: 75px;
+
+        .mdl-button {
+            color: white;      
+        }
+
+        .mdl-button:hover {
+            background-color: white;
+            color: $primary;
+            transition: background-color .3s ease-in;
+        }
+
+        .header-link {
+            margin-right: 10px;
+        }
+    }
+
+    [data-component="header-right-content"] {
+        display: flex;
+        flex: 1;
+        justify-content: flex-end;
+        padding-right: 120px;
+        color: white;
+
+        .mdl-button {
+            margin-right: 12px;
+        }
+        
+        .fa {
+            transition: color 0.25s ease-in-out;
+        }
+
+        .fa:hover {
+            color: black;
+            transition: color 0.25s ease-in-out;
+        }
+    }
+}
+
+.active-link {
+    background-color: white !important;
+    color: $primary !important;
+}

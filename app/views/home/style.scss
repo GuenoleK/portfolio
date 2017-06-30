@@ -1,0 +1,56 @@
+[data-component="home-container"] {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    flex: 1;
+    text-align: center;
+
+    [data-component="home-about-me"], [data-component="home-my-skills"], 
+    [data-component="home-my-achievements"], [data-component="home-my-career"]  {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .home-intro {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 550px;
+    }
+
+    [data-component="home-about-me"] {
+        height: 300px;
+        background: purple;
+    }
+
+    [data-component="home-my-skills"] {
+        height: 300px;
+        background: mediumseagreen;
+    }
+
+    [data-component="home-my-achievements"] {
+        height: 300px;
+        background: cyan;
+    }
+
+    [data-component="home-my-career"] {
+        height: 300px;
+        background: peru;
+    }
+}
+
+[data-component="quote-card"] {
+    width: 500px !important;
+
+    .mdl-card__actions {
+        display: flex;
+        align-items: center;
+    }
+
+    [data-component="quote-bottom"] {
+        display: none;
+        justify-content: flex-end;
+    }
+}
