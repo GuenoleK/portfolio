@@ -68,10 +68,10 @@ export class Layout extends PureComponent {
                             <HeaderLink to="/about-me" id="header-link-about-me" className="mdl-button mdl-js-button mdl-js-ripple-effect header-link">
                                 Qui suis-je ?
                             </HeaderLink>
-                            <HeaderLink to="/my-skills" id="header-link-skills" className="mdl-button mdl-js-button mdl-js-ripple-effect header-link">
+                            <HeaderLink to="/my-skills/all" id="header-link-skills" className="mdl-button mdl-js-button mdl-js-ripple-effect header-link">
                                 Mes compétences
                             </HeaderLink>
-                            <HeaderLink to="/my-achievements" id="header-link-achievements" className="mdl-button mdl-js-button mdl-js-ripple-effect header-link">
+                            <HeaderLink to="/my-achievements/all" id="header-link-achievements" className="mdl-button mdl-js-button mdl-js-ripple-effect header-link">
                                 Mes réalisations
                             </HeaderLink>
                             <HeaderLink to="my-career" id="header-link-career" className="mdl-button mdl-js-button mdl-js-ripple-effect header-link">

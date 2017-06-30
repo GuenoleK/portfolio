@@ -1,11 +1,12 @@
 import React, {PureComponent} from 'react';
+import "./style.scss";
 
 export class AboutMeView extends PureComponent {
 
     render() {
         return(
-            <div data-component="my-achievements">
-                <h3>My achievements</h3>
+            <div data-component="about-me">
+                <h3>Qui suis-je ?</h3>
             </div>
         );
     }

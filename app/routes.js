@@ -1,7 +1,7 @@
 import React from 'react';
 import {HomeView} from './views/home';
 import {AboutMeView} from './views/about-me';
-import {MySkillsView} from './views/my-skills';
+import {MySkillsView} from './views/my-skills/index';
 import {MyAchievementsView} from './views/my-achievements';
 import {MyCareerView} from './views/my-career';
 import {Layout} from './components/layout';
@@ -23,7 +23,7 @@ export default {
             component: AboutMeView
         },
         {
-            path: 'my-skills',
+            path: 'my-skills/:name',
             component: MySkillsView
         },
         {
@@ -31,7 +31,7 @@ export default {
             component: MyCareerView
         },
         {
-            path: 'my-achievements',
+            path: 'my-achievements/:name',
             component: MyAchievementsView
         }
     ]

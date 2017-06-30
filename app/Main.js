@@ -4,14 +4,17 @@
 */
 import React, {Component} from 'react';
 import {Layout} from './components/layout';
+import { MuiThemeProvider } from 'material-ui/styles';
 
 class Main extends Component {
 
     render() {
         return (
-            <div id='container'>
-                {this.props.children}
-            </div>
+            <MuiThemeProvider>
+                <div id='container'>
+                    {this.props.children}
+                </div>
+            </MuiThemeProvider>
         );
     }
 }

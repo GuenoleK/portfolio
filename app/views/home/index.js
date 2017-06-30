@@ -9,7 +9,7 @@ export class HomeView extends PureComponent {
         return(
             <div data-component="home-container">
                 <Parallax className="home-intro" bgImage={require('../../assets/intro5.jpg')} strength={400}>
-                    <div className="demo-card-event mdl-card mdl-shadow--2dp">
+                    <div data-component="quote-card" className="demo-card-event mdl-card mdl-shadow--2dp">
                         <div className="mdl-card__title mdl-card--expand">
                             <h4>
                                 "Success is not the key to happiness. 
@@ -18,11 +18,10 @@ export class HomeView extends PureComponent {
                                  - Albert Shweitzer
                             </h4>
                         </div>
-                        <div className="mdl-card__actions mdl-card--border">
+                        <div data-component="quote-bottom" className="mdl-card__actions mdl-card--border">
                             <a className="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                            Add to Calendar
+                            Add to Calendar <i className="material-icons">event</i>
                             </a>
-                            <i className="material-icons">event</i>
                         </div>
                     </div>
                 </Parallax>
@@ -34,13 +33,13 @@ export class HomeView extends PureComponent {
                 </div>
                 <div id="home-my-skills" data-component="home-my-skills">
                     <h4>Mes compétences</h4>
-                    <Link to="/about-me" className="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--raised">
+                    <Link to="/my-skills/all" className="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--raised">
                         Mes compétences
                     </Link>
                 </div>
                 <div id="home-my-achievements" data-component="home-my-achievements">
                     <h4>Mes réalisations</h4>
-                    <Link to="/my-achievements" className="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--raised">
+                    <Link to="/my-achievements/all" className="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--raised">
                         Mes réalisations
                     </Link>
                 </div>
