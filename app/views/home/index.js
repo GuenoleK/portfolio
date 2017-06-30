@@ -25,30 +25,30 @@ export class HomeView extends PureComponent {
                         </div>
                     </div>
                 </Parallax>
-                <div id="home-about-me" data-component="home-about-me">
-                    <h4>Je m'appelle Guénolé Kikabou. <br/> Je suis étudiant en ingénierie du logiciel.</h4>
+                <Parallax id="home-about-me" className="home-about-me" bgImage={require('../../assets/preview (1).png')} strength={400}>
+                     <h4>Je m'appelle Guénolé Kikabou. <br/> Je suis étudiant en ingénierie du logiciel.</h4>
                     <Link to="/about-me" className="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--raised">
                         Qui suis-je ?
                     </Link>
-                </div>
-                <div id="home-my-skills" data-component="home-my-skills">
-                    <h4>Mes compétences</h4>
+                </Parallax>
+                <Parallax id="home-my-skills" className="home-my-skills" bgImage={require('../../assets/preview.png')} strength={400}>
+                     <h4>Mes compétences</h4>
                     <Link to="/my-skills/all" className="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--raised">
                         Mes compétences
                     </Link>
-                </div>
-                <div id="home-my-achievements" data-component="home-my-achievements">
+                </Parallax>
+                <Parallax id="home-my-achievements" className="home-my-achievements" bgImage={require('../../assets/preview.gif')} strength={400}>
                     <h4>Mes réalisations</h4>
                     <Link to="/my-achievements/all" className="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--raised">
                         Mes réalisations
                     </Link>
-                </div>
-                <div id="home-my-career" data-component="home-my-career">
+                </Parallax>
+                <Parallax id="home-my-career" className="home-my-career" bgImage={require('../../assets/style_imagery_bestpractices_narrative1.png')} strength={400}>
                     <h4>Mon expérience</h4>
                     <Link to="/my-career" className="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--raised">
                         Mon expérience
                     </Link>
-                </div>
+                </Parallax>
             </div>
         );
     }
