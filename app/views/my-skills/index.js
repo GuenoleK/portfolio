@@ -42,9 +42,10 @@ export class MySkillsView extends React.Component {
                 <h3>Mes compétences</h3><br/>
                 <div className="skills-cards">
                     <Card 
-                        title="Créer un synergie" 
+                        title="Créer une synergie" 
                         content="J'ai pu observer que je savais créer une synergie de compétences et de personnalités ..." 
-                        onClick={() => this.openSkillModal("synergie") } />
+                        onClick={() => this.openSkillModal("synergie") }
+                        buttonName="Lire plus" />
                 </div>
                 <Dialog onRequestClose={this.handleRequestClose} open={this.state.isModalopen} transition={Collapse}>
                     <DialogTitle>{this.state.modalTitle}</DialogTitle>
