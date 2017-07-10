@@ -1,5 +1,6 @@
 [data-component="portfolio-card"] {
   margin: 0px 10px 10px 0px;
+  z-index: 0 !important;
 
   [data-component="card-title"] {
     color: #fff !important;
@@ -8,6 +9,11 @@
   }
 
   [data-component="card-bottom"] {
+
+    > a {
+      color: transparent;
+    }
+
     > button {
       width: 100%;
     }

@@ -44,7 +44,8 @@ export class MyAchievementsView extends PureComponent {
                     <Card 
                         title="It'School" 
                         content="Au sein des écoles, les institutrices sont souvent confrontées à des problèmes logistiques ..." 
-                        onClick={() => this.openAchievementModal("it'school") } />
+                        onClick={() => this.openAchievementModal("it'school") }
+                        buttonName="Lire plus" />
                 </div>
 
                 <Dialog onRequestClose={this.handleRequestClose} open={this.state.isModalopen} transition={Collapse}>
