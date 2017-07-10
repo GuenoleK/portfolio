@@ -1,21 +1,31 @@
 [data-component="portfolio-card"] {
   margin: 0px 10px 10px 0px;
   z-index: 0 !important;
+}
 
-  [data-component="card-title"] {
+[data-component="home-portfolio-card"] {
+  margin: 0px 10px 10px 0px;
+  z-index: 0 !important;
+  width: 500px !important;
+
+  > div {
+    justify-content: center !important;
+  }
+}
+
+[data-component="card-title"] {
     color: #fff !important;
     height: 176px;
     background: url('../../assets/welcome_card.jpg') center / cover;
   }
 
-  [data-component="card-bottom"] {
+[data-component="card-bottom"] {
 
-    > a {
-      color: transparent;
-    }
+  > a {
+    color: transparent;
+  }
 
-    > button {
-      width: 100%;
-    }
+  > button {
+    width: 100%;
   }
 }

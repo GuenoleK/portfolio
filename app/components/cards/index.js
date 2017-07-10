@@ -14,7 +14,7 @@ export class Card extends PureComponent {
 
     render() {
         return(
-            <div data-component="portfolio-card" className="demo-card-event mdl-card mdl-shadow--2dp">
+            <div data-component={`${this.props.type}-portfolio-card`} className="demo-card-event mdl-card mdl-shadow--2dp">
                 {this.props.title && 
                     <div className="mdl-card__title" data-component="card-title">
                         <h2 className="mdl-card__title-text">{this.props.title}</h2>
@@ -31,4 +31,8 @@ export class Card extends PureComponent {
             </div>
         )
     }
+}
+
+Card.defaultProps = {
+    type: ""
 }
