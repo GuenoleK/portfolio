@@ -11,6 +11,12 @@
   > div {
     justify-content: center !important;
   }
+
+  button {
+    > span {
+      font-size: 15px;
+    }
+  }
 }
 
 [data-component="card-title"] {

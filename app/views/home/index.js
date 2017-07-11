@@ -33,7 +33,15 @@ export class HomeView extends PureComponent {
                 </Parallax>
                 <Parallax id="home-about-me" className="home-about-me" bgImage={require('../../assets/preview (1).png')} strength={400}>
                     <Card 
-                        content="Je m'appelle Guénolé Kikabou et je suis étudiant en ingénierie du logiciel. Apprennez-en plus sur moi." 
+                        content={
+                            <span>
+                                Je m'appelle Guénolé Kikabou
+                                <br/>
+                                et je suis étudiant en ingénierie du logiciel.
+                                <br/>
+                                Apprennez-en plus sur moi.
+                            </span>
+                        } 
                         buttonName="Qui suis-je ?"
                         link="/about-me"
                         type="home"
@@ -41,7 +49,13 @@ export class HomeView extends PureComponent {
                 </Parallax>
                 <Parallax id="home-my-skills" className="home-my-skills" bgImage={require('../../assets/preview.png')} strength={400}>
                     <Card 
-                        content="Découvrez les compétences que j'ai pu acquérir" 
+                        content={<span>
+                                Découvrez
+                                <br/>
+                                les compétences que j'ai acquis
+                                <br/>
+                                au fil des mes expériences
+                            </span>}
                         buttonName="Mes compétences"
                         link="/my-skills/all" 
                         type="home"
@@ -49,7 +63,11 @@ export class HomeView extends PureComponent {
                 </Parallax>
                 <Parallax id="home-my-achievements" className="home-my-achievements" bgImage={require('../../assets/preview.gif')} strength={400}>
                     <Card 
-                        content="Découvrez l'ensemble de mes réalisations" 
+                        content={<span>
+                                Découvrez
+                                <br/>
+                                l'ensemble de mes réalisations
+                            </span>} 
                         buttonName="Mes réalisations"
                         link="/my-achievements/all" 
                         type="home"
@@ -57,7 +75,13 @@ export class HomeView extends PureComponent {
                 </Parallax>
                 <Parallax id="home-my-career" className="home-my-career" bgImage={require('../../assets/style_imagery_bestpractices_narrative1.png')} strength={400}>
                     <Card 
-                        content="Découvrez les lieux où j'ai pu mettre en pratique et développer mes compétences dans le domaine informatique" 
+                        content={<span>
+                            Découvrez
+                            <br/>
+                            les lieux où j'ai pu mettre en pratique
+                            <br/>
+                            et développer l'ensemble de mes compétences
+                            </span>} 
                         buttonName="Mon expérience"
                         link="/my-career" 
                         type="home"

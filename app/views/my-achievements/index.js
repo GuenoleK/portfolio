@@ -28,11 +28,7 @@ export class MyAchievementsView extends PureComponent {
                     break;
                 default:
                     break;
-
             }
-
-        } else {
-            console.log("Hello people");
         }
     }
 
@@ -67,10 +63,16 @@ export class MyAchievementsView extends PureComponent {
             case "it'school":
                 this.setState({
                     modalTitle: capitalize(type),
-                    modalContent: "Au sein des écoles, les institutrices sont souvent confrontées à des problèmes logistiques tels que l’utilisation conséquente de papier et d’encre pour imprimer leurs exercices." + 
-                    "Afin de se passer du support papier, notre but est de matérialiser les exercices créés par les enseignants au format numérique comme le coloriage, les jeux de course, memory, etc." +
-                    "La préparation des supports d’exercices sera simplifiée et permettra un gain de temps." +
-                    "Ainsi, les maîtresses pourront utiliser des exercices crées au préalables ou générer leurs propres exercices. Elles pourront évaluer le niveau des élèves afin de les orienter dans les révisions. Cela permettra aussi de travailler en groupe, d’enseigner l’autonomie aux enfants, mais aussi qu’ils puissent apprendre à leur rythme tout en s’amusant à travers différentes activités ludiques.",
+                    modalContent:
+                    <span>
+                        Au sein des écoles, les institutrices sont souvent confrontées à des problèmes logistiques tels que l’utilisation conséquente de papier et d’encre pour imprimer leurs exercices.
+                        Afin de se passer du support papier, notre but est de matérialiser les exercices créés par les enseignants au format numérique comme le coloriage, les jeux de course, memory, etc.
+                        <br/>
+                        La préparation des supports d’exercices sera simplifiée et permettra un gain de temps.
+                        Ainsi, les maîtresses pourront utiliser des exercices crées au préalables ou générer leurs propres exercices. 
+                        Elles pourront évaluer le niveau des élèves afin de les orienter dans les révisions. 
+                        Cela permettra aussi de travailler en groupe, d’enseigner l’autonomie aux enfants, mais aussi qu’ils puissent apprendre à leur rythme tout en s’amusant à travers différentes activités ludiques.
+                    </span>,
                     skillList: [{name: "synergie", link: "synergy"}]
                 });
                 break;
