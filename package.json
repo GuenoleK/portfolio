@@ -82,7 +82,7 @@
     "i18next": "^7.1.1",
     "lodash": "^4.17.4",
     "material-design-lite": "^1.3.0",
-    "material-ui": "^1.0.0-alpha.20",
+    "material-ui": "^1.0.0-beta.9",
     "react": "15.5.4",
     "react-dom": "^15.4.2",
     "react-parallax": "^1.4.1",
