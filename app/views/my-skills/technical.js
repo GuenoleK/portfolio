@@ -38,26 +38,31 @@ export class TechnicalSkills extends React.Component {
         return(
             <div className="skills-cards">
                 <Card
+                    skillLevel={100}
                     title="Javascript" 
                     content="J'ai pu observer que je savais créer une synergie de compétences et de personnalités ..." 
                     onClick={() => this.openSkillModal("synergie") }
                     buttonName="Lire plus" />
                 <Card 
+                    skillLevel={60}
                     title="C#" 
                     content="J'ai pu observer que je savais créer une synergie de compétences et de personnalités ..." 
                     onClick={() => this.openSkillModal("synergie") }
                     buttonName="Lire plus" />
                 <Card 
+                    skillLevel={40}
                     title="SQL" 
                     content="J'ai pu observer que je savais créer une synergie de compétences et de personnalités ..." 
                     onClick={() => this.openSkillModal("synergie") }
                     buttonName="Lire plus" />
                 <Card 
+                    skillLevel={40}
                     title="TEST" 
                     content="J'ai pu observer que je savais créer une synergie de compétences et de personnalités ..." 
                     onClick={() => this.openSkillModal("synergie") }
                     buttonName="Lire plus" />
                 <Card 
+                    skillLevel={40}
                     title="TEST" 
                     content="J'ai pu observer que je savais créer une synergie de compétences et de personnalités ..." 
                     onClick={() => this.openSkillModal("synergie") }
