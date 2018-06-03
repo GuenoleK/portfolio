@@ -3,7 +3,6 @@
 * which incorporates components provided by Material-UI.
 */
 import React, {Component} from 'react';
-import {Layout} from './components/layout';
 import { MuiThemeProvider } from 'material-ui/styles';
 
 class Main extends Component {

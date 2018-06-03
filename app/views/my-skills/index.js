@@ -5,6 +5,7 @@ import Dialog, { DialogTitle, DialogContent, DialogContentText } from 'material-
 import Collapse from 'material-ui/transitions/collapse';
 import {capitalize} from "lodash";
 import {Link} from "react-router";
+import {Article} from "../../components/article";
 import "./style.scss";
 
 
@@ -36,14 +37,7 @@ export class MySkillsView extends React.Component {
     render() {
         return(
             <div data-component="my-skills">
-                <h3>Mes compétences</h3><br/>
-                <div className="skills-cards">
-                    <Card 
-                        title="Créer une synergie" 
-                        content="J'ai pu observer que je savais créer une synergie de compétences et de personnalités ..." 
-                        onClick={() => this.openSkillModal("synergie") }
-                        buttonName="Lire plus" />
-                </div>
+                <Article headline="Mes compétences" content={this.skillsCardContent()} />
                 <Dialog onRequestClose={this.handleRequestClose} open={this.state.isModalopen} transition={Collapse}>
                     <DialogTitle>{this.state.modalTitle}</DialogTitle>
                     <DialogContent>
@@ -56,6 +50,18 @@ export class MySkillsView extends React.Component {
                 </Dialog>
             </div>
         );
+    }
+
+    skillsCardContent() {
+        return(
+            <div className="skills-cards">
+                <Card 
+                    title="Créer une synergie" 
+                    content="J'ai pu observer que je savais créer une synergie de compétences et de personnalités ..." 
+                    onClick={() => this.openSkillModal("synergie") }
+                    buttonName="Lire plus" />
+            </div>
+        )
     }
 
     openSkillModal(type) {
