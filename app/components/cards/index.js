@@ -30,8 +30,10 @@ export class Card extends PureComponent {
 
     progressProgrssBarIndicator() {
         const { completed } = this.state;
+
+        // The progress bar seems to have + 10 value compared to what we indicate it
         this.setState({
-            completed: completed === this.props.skillLevel ? completed : completed + 1
+            completed: completed === this.props.skillLevel - 10 ? completed : completed + 1
         });
     };
 
