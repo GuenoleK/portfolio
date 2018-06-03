@@ -6,12 +6,10 @@ import Collapse from 'material-ui/transitions/collapse';
 import {capitalize} from "lodash";
 import {Link} from "react-router";
 import {Article} from "../../components/article";
-import {TechnicalSkills} from "./technical";
-import {TransversalSkills} from "./transversal";
 import "./style.scss";
 
 
-export class MySkillsView extends React.Component {
+export class TechnicalSkills extends React.Component {
 
     constructor(props) {
         super(props);
@@ -37,32 +35,40 @@ export class MySkillsView extends React.Component {
     }
 
     render() {
-        const headline = this.props.params.name === "technical" ? "Compétences techniques" : this.props.params.name === "transversal" ? "Compétences transverses" : "Mes compétences";
         return(
-            <div data-component="my-skills">
-                <Article headline={headline} content={this.skillsCardContent(this.props.params.name)} />
-                <Dialog onRequestClose={this.handleRequestClose} open={this.state.isModalopen} transition={Collapse}>
-                    <DialogTitle>{this.state.modalTitle}</DialogTitle>
-                    <DialogContent>
-                        <DialogContentText>
-                            {this.state.modalContent}
-                            <br/>
-                            {this.renderProjectListButtons()}
-                        </DialogContentText>
-                    </DialogContent>
-                </Dialog>
+            <div className="skills-cards">
+                <Card
+                    skillLevel={100}
+                    title="Javascript" 
+                    content="J'ai pu observer que je savais créer une synergie de compétences et de personnalités ..." 
+                    onClick={() => this.openSkillModal("synergie") }
+                    buttonName="Lire plus" />
+                <Card 
+                    skillLevel={60}
+                    title="C#" 
+                    content="J'ai pu observer que je savais créer une synergie de compétences et de personnalités ..." 
+                    onClick={() => this.openSkillModal("synergie") }
+                    buttonName="Lire plus" />
+                <Card 
+                    skillLevel={40}
+                    title="SQL" 
+                    content="J'ai pu observer que je savais créer une synergie de compétences et de personnalités ..." 
+                    onClick={() => this.openSkillModal("synergie") }
+                    buttonName="Lire plus" />
+                <Card 
+                    skillLevel={40}
+                    title="TEST" 
+                    content="J'ai pu observer que je savais créer une synergie de compétences et de personnalités ..." 
+                    onClick={() => this.openSkillModal("synergie") }
+                    buttonName="Lire plus" />
+                <Card 
+                    skillLevel={40}
+                    title="TEST" 
+                    content="J'ai pu observer que je savais créer une synergie de compétences et de personnalités ..." 
+                    onClick={() => this.openSkillModal("synergie") }
+                    buttonName="Lire plus" />
             </div>
         );
-    }
-
-    skillsCardContent(path) {
-        if (path === "technical") {
-            return <TechnicalSkills router={this.props.router} />
-        } else if (path === "transversal") {
-            return <TransversalSkills router={this.props.router}/>
-        }
-
-        return <div>Nope</div>
     }
 
     openSkillModal(type) {

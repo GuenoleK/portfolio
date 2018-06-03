@@ -6,6 +6,7 @@ import {capitalize} from "lodash";
 import Dialog, { DialogTitle, DialogContent, DialogContentText } from 'material-ui/Dialog';
 import {Link} from "react-router";
 import "./style.scss";
+import {Article} from "../../components/article";
 
 export class MyAchievementsView extends PureComponent {
 
@@ -35,14 +36,7 @@ export class MyAchievementsView extends PureComponent {
     render() {
         return(
             <div data-component="my-achievements">
-                <h3>Mes réalisations</h3>
-                <div className="achievements-cards">
-                    <Card 
-                        title="It'School" 
-                        content="Au sein des écoles, les institutrices sont souvent confrontées à des problèmes logistiques ..." 
-                        onClick={() => this.openAchievementModal("it'school") }
-                        buttonName="Lire plus" />
-                </div>
+                <Article headline="Mes réalisations" content={this.achivementCardContent()} />
 
                 <Dialog onRequestClose={this.handleRequestClose} open={this.state.isModalopen} transition={Collapse}>
                     <DialogTitle>{this.state.modalTitle}</DialogTitle>
@@ -56,6 +50,18 @@ export class MyAchievementsView extends PureComponent {
                 </Dialog>
             </div>
         );
+    }
+
+    achivementCardContent() {
+        return(
+            <div className="achievements-cards">
+                <Card 
+                    title="It'School" 
+                    content="Au sein des écoles, les institutrices sont souvent confrontées à des problèmes logistiques ..." 
+                    onClick={() => this.openAchievementModal("it'school") }
+                    buttonName="Lire plus" />
+            </div>
+        )
     }
 
     openAchievementModal(type) {

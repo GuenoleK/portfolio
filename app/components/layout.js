@@ -1,6 +1,8 @@
 import React, {PureComponent} from 'react';
 import "./style.scss";
 import {HeaderLink} from "./headerLink";
+import {Button, Menu, MenuList, MenuItem} from "material-ui";
+import {Link} from "react-router"
 
 export class Layout extends PureComponent {
 
@@ -14,9 +16,23 @@ export class Layout extends PureComponent {
             buttonClassPosition: "header-button-down",
             headerClassName: "header-nav-down",
             headerPosition: "0px",
-            updateMDL: false
+            updateMDL: false,
+            anchorEl: null
         }
     }
+    
+    nextPath(path) {
+        this.props.router.push(path);
+        this.handleClose();
+    }
+    
+    handleClick = event => {
+    this.setState({ anchorEl: event.currentTarget });
+    };
+
+    handleClose = () => {
+        this.setState({ anchorEl: null });
+    };
 
     componentDidMount() {
         this.setState({navbarHeight: document.getElementById("header-layout").offsetHeight});
@@ -36,8 +52,8 @@ export class Layout extends PureComponent {
         if(Math.abs(lastScrollTop - st) <= delta) {
             return;
         }
-        
-        if (st > lastScrollTop && st > navbarHeight){
+
+        if (st > lastScrollTop && st > navbarHeight && this.props.location.pathname === "/"){
             // Scroll Down
             this.setState({headerClassName: "header-nav-up", buttonClassPosition: "header-button-up"})
         } else {
@@ -57,6 +73,8 @@ export class Layout extends PureComponent {
 
 
     render() {
+        const {anchorEl} = this.state;
+        const menuListActiveClassName = this.props.params.name === "technical" || this.props.params.name === "transversal" ? "active-link" : ""
         return(
             <div data-component="layout" id="layout">
                 <div data-component="header" id="header-layout" className={`${this.state.headerClassName}`}>
@@ -68,9 +86,20 @@ export class Layout extends PureComponent {
                             <HeaderLink to="/about-me" id="header-link-about-me" className="mdl-button mdl-js-button mdl-js-ripple-effect header-link">
                                 Qui suis-je ?
                             </HeaderLink>
-                            <HeaderLink to="/my-skills/all" id="header-link-skills" className="mdl-button mdl-js-button mdl-js-ripple-effect header-link">
+                            <HeaderLink
+                                id="simple-menu"
+                                className={`mdl-button mdl-js-button mdl-js-ripple-effect header-link ${menuListActiveClassName}`}
+                                aria-owns={anchorEl ? 'simple-menu' : null} aria-haspopup="true" onClick={this.handleClick}>
                                 Mes compétences
                             </HeaderLink>
+                            <Menu
+                                id="simple-menu"
+                                anchorEl={anchorEl}
+                                open={Boolean(anchorEl)}
+                                onClose={this.handleClose}>
+                                <MenuItem onClick={() => this.nextPath("/my-skills/technical")}>Compétences Techniques</MenuItem>
+                                <MenuItem onClick={() => this.nextPath("/my-skills/transversal")}>Compétences Transverses</MenuItem>
+                            </Menu>
                             <HeaderLink to="/my-achievements/all" id="header-link-achievements" className="mdl-button mdl-js-button mdl-js-ripple-effect header-link">
                                 Mes réalisations
                             </HeaderLink>
