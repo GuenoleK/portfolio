@@ -36,7 +36,7 @@ export class MyAchievementsView extends PureComponent {
     render() {
         return(
             <div data-component="my-achievements">
-                <Article headline="Mes réalisation" content={this.achivementCardContent()} />
+                <Article headline="Mes réalisations" content={this.achivementCardContent()} />
 
                 <Dialog onRequestClose={this.handleRequestClose} open={this.state.isModalopen} transition={Collapse}>
                     <DialogTitle>{this.state.modalTitle}</DialogTitle>

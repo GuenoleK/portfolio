@@ -31,7 +31,7 @@ export class Layout extends PureComponent {
     };
 
     handleClose = () => {
-    this.setState({ anchorEl: null });
+        this.setState({ anchorEl: null });
     };
 
     componentDidMount() {
@@ -74,7 +74,6 @@ export class Layout extends PureComponent {
 
     render() {
         const {anchorEl} = this.state;
-        console.log(this.props);
         const menuListActiveClassName = this.props.params.name === "technical" || this.props.params.name === "transversal" ? "active-link" : ""
         return(
             <div data-component="layout" id="layout">
@@ -97,8 +96,7 @@ export class Layout extends PureComponent {
                                 id="simple-menu"
                                 anchorEl={anchorEl}
                                 open={Boolean(anchorEl)}
-                                onClose={this.handleClose}
-                            >
+                                onClose={this.handleClose}>
                                 <MenuItem onClick={() => this.nextPath("/my-skills/technical")}>Compétences Techniques</MenuItem>
                                 <MenuItem onClick={() => this.nextPath("/my-skills/transversal")}>Compétences Transverses</MenuItem>
                             </Menu>
