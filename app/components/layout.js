@@ -56,7 +56,7 @@ export class Layout extends PureComponent {
         if (st > lastScrollTop && st > navbarHeight && this.props.location.pathname === "/") {
             // Scroll Down
             this.setState({headerClassName: "header-nav-up", buttonClassPosition: "header-button-up"})
-        } else if (st < lastScrollTop && this.props.location.pathname === "/") {
+        } else if (st < lastScrollTop) {
             // Scroll Up
             this.setState({headerClassName: "header-nav-down", buttonClassPosition: "header-button-down"})
         }
