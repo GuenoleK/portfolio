@@ -30,6 +30,7 @@ export class HomeView extends PureComponent {
                             </a>
                         </div>
                     </div>
+                    <div className="fullscreen-header__pointer material-icons">expand_more</div>
                 </Parallax>
                 <Parallax id="home-about-me" className="home-about-me" bgImage={require('../../assets/preview (1).png')} strength={400}>
                     <Card 
