@@ -1,5 +1,4 @@
 import React from 'react';
-import Button from 'material-ui/Button';
 import {Card} from "../../components/cards/index";
 import Dialog, { DialogTitle, DialogContent, DialogContentText } from 'material-ui/Dialog';
 import Collapse from 'material-ui/transitions/collapse';
@@ -8,6 +7,7 @@ import {Link} from "react-router";
 import {Article} from "../../components/article";
 import {TechnicalSkills} from "./technical";
 import {TransversalSkills} from "./transversal";
+import {Slide, AppBar, Toolbar, IconButton, CloseIcon, Tooltip, Typography, Button} from "material-ui";
 import "./style.scss";
 
 
@@ -41,7 +41,15 @@ export class MySkillsView extends React.Component {
         return(
             <div data-component="my-skills">
                 <Article headline={headline} content={this.skillsCardContent(this.props.params.name)} />
-                <Dialog onClose={this.handleRequestClose} open={this.state.isModalopen} transition={Collapse}>
+                <Dialog className="skills-dialog" onClose={this.handleRequestClose} open={this.state.isModalopen} transition={Collapse} TransitionComponent={this.Transition} fullScreen>
+                    <AppBar className="appbar">
+                        <Toolbar className="toolbar">
+                            <Typography variant="title" color="inherit">{this.state.modalTitle}</Typography>
+                            <IconButton color="inherit" onClick={this.handleRequestClose} aria-label="Close">
+                                <div className="material-icons">close</div>
+                            </IconButton>
+                        </Toolbar>
+                    </AppBar>
                     <DialogTitle>{this.state.modalTitle}</DialogTitle>
                     <DialogContent>
                         <DialogContentText>
@@ -53,6 +61,10 @@ export class MySkillsView extends React.Component {
                 </Dialog>
             </div>
         );
+    }
+
+    Transition(props) {
+        return <Slide direction="up" {...props} />;
     }
 
     skillsCardContent(path) {

@@ -38,7 +38,32 @@ export class TransversalSkills extends React.Component {
         return(
             <div className="skills-cards">
                 <Card 
-                    title="Créer une synergie" 
+                    title="Force de proposition" 
+                    skillLevel={80}
+                    content="J'ai pu observer que je savais créer une synergie de compétences et de personnalités ..." 
+                    onClick={() => this.openSkillModal("synergie") }
+                    buttonName="Lire plus" />
+                <Card
+                    title="Vulgarisation du langage" 
+                    skillLevel={75}
+                    content="J'ai pu observer que je savais créer une synergie de compétences et de personnalités ..." 
+                    onClick={() => this.openSkillModal("synergie") }
+                    buttonName="Lire plus" />
+                <Card 
+                    title="Persévérance" 
+                    skillLevel={60}
+                    content="J'ai pu observer que je savais créer une synergie de compétences et de personnalités ..." 
+                    onClick={() => this.openSkillModal("synergie") }
+                    buttonName="Lire plus" />
+                <Card 
+                    title="Curiosité" 
+                    skillLevel={50}
+                    content="J'ai pu observer que je savais créer une synergie de compétences et de personnalités ..." 
+                    onClick={() => this.openSkillModal("synergie") }
+                    buttonName="Lire plus" />
+                <Card 
+                    title="Esprit d'équipe" 
+                    skillLevel={40}
                     content="J'ai pu observer que je savais créer une synergie de compétences et de personnalités ..." 
                     onClick={() => this.openSkillModal("synergie") }
                     buttonName="Lire plus" />
