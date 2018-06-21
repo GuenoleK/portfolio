@@ -1,13 +1,11 @@
 import React from 'react';
 import {Card} from "../../components/cards/index";
-import Dialog, { DialogTitle, DialogContent, DialogContentText } from 'material-ui/Dialog';
-import Collapse from 'material-ui/transitions/collapse';
 import {capitalize} from "lodash";
 import {Link} from "react-router";
 import {Article} from "../../components/article";
 import {TechnicalSkills} from "./technical";
 import {TransversalSkills} from "./transversal";
-import {Slide, AppBar, Toolbar, IconButton, CloseIcon, Tooltip, Typography, Button} from "material-ui";
+import {Slide, AppBar, Toolbar, IconButton, CloseIcon, Tooltip, Typography, Button, Collapse, Dialog, DialogTitle, DialogContent, DialogContentText} from "material-ui";
 import "./style.scss";
 
 
@@ -24,6 +22,7 @@ export class MySkillsView extends React.Component {
     }
 
     componentWillMount() {
+        window.scrollTo(0, 0)
         const {name} = this.props.router.params
         if(name !== "all") {
             switch(name) {

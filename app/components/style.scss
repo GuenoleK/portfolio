@@ -55,12 +55,16 @@
     }
 
     [data-component="content"] {
-        padding-top: 75px;
         flex: 1;
         display: flex;
         flex-direction: column;
 
-        > div {
+        > div.head {
+            height: 75px;
+            background: $primary;
+        }
+
+        div[data-component="home-container"] {
             display: flex;
             justify-content: center;
         }
