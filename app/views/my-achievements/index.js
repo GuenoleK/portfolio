@@ -1,12 +1,10 @@
 import React, {PureComponent} from 'react';
-import Button from 'material-ui/Button';
 import {Card} from "../../components/cards/index";
-import Collapse from 'material-ui/transitions/collapse';
 import {capitalize} from "lodash";
-import Dialog, { DialogTitle, DialogContent, DialogContentText } from 'material-ui/Dialog';
 import {Link} from "react-router";
 import "./style.scss";
 import {Article} from "../../components/article";
+import {Collapse as MUICollapse, Button, Dialog, DialogTitle, DialogContent, DialogContentText} from 'material-ui'
 
 export class MyAchievementsView extends PureComponent {
 
@@ -21,6 +19,7 @@ export class MyAchievementsView extends PureComponent {
     }
 
     componentWillMount() {
+        window.scrollTo(0, 0)
         const {name} = this.props.router.params
         if(name !== "all") {
             switch(name) {
@@ -38,7 +37,7 @@ export class MyAchievementsView extends PureComponent {
             <div data-component="my-achievements">
                 <Article headline="Mes réalisations" content={this.achivementCardContent()} />
 
-                <Dialog onRequestClose={this.handleRequestClose} open={this.state.isModalopen} transition={Collapse}>
+                <Dialog onRequestClose={this.handleRequestClose} open={this.state.isModalopen} transition={MUICollapse}>
                     <DialogTitle>{this.state.modalTitle}</DialogTitle>
                     <DialogContent>
                         <DialogContentText>

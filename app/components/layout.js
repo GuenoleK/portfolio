@@ -126,6 +126,7 @@ export class Layout extends PureComponent {
                         <i className="material-icons">email</i>
                 </button>
                 <div data-component="content">
+                    <div className="head" />
                     {this.props.children}
                 </div>
                 <footer data-component="footer">

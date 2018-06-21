@@ -5,6 +5,10 @@ import {Article} from "../../components/article";
 
 export class MyCareerView extends PureComponent {
 
+    componentDidMount() {
+        window.scrollTo(0, 0)
+    }
+
     render() {
         return(
             <div data-component="my-career">

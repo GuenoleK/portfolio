@@ -6,15 +6,14 @@ import {Card} from "../../components/cards/index";
 
 export class HomeView extends PureComponent {
 
-    
-    goTo(link) {
-        
+    componentDidMount() {
+        window.scrollTo(0, 0)
     }
 
     render() {
         return(
             <div data-component="home-container">
-                <Parallax className="home-intro" bgImage={require('../../assets/intro5.jpg')} strength={400}>
+                <Parallax className="home-intro" bgImage={require('../../assets/intro5.jpg')} strength={100}>
                     <div data-component="quote-card" className="demo-card-event mdl-card mdl-shadow--2dp">
                         <div className="mdl-card__title mdl-card--expand">
                             <h4>
@@ -32,7 +31,7 @@ export class HomeView extends PureComponent {
                     </div>
                     <div className="fullscreen-header__pointer material-icons">expand_more</div>
                 </Parallax>
-                <Parallax id="home-about-me" className="home-about-me" bgImage={require('../../assets/preview (1).png')} strength={400}>
+                <Parallax id="home-about-me" className="home-about-me" bgImage={require('../../assets/style_imagery_bestpractices_narrative1.png')} strength={400}>
                     <Card 
                         content={
                             <span>
@@ -74,7 +73,7 @@ export class HomeView extends PureComponent {
                         type="home"
                     />
                 </Parallax>
-                <Parallax id="home-my-career" className="home-my-career" bgImage={require('../../assets/style_imagery_bestpractices_narrative1.png')} strength={400}>
+                <Parallax id="home-my-career" className="home-my-career" bgImage={require('../../assets/preview (1).png')} strength={400}>
                     <Card 
                         content={<span>
                             Découvrez

@@ -1,8 +1,7 @@
 import React from 'react';
 import Button from 'material-ui/Button';
 import {Card} from "../../components/cards/index";
-import Dialog, { DialogTitle, DialogContent, DialogContentText } from 'material-ui/Dialog';
-import Collapse from 'material-ui/transitions/collapse';
+import {Collapse, Dialog, DialogTitle, DialogContent, DialogContentText } from 'material-ui';
 import {capitalize} from "lodash";
 import {Link} from "react-router";
 import {Article} from "../../components/article";
@@ -18,19 +17,6 @@ export class TechnicalSkills extends React.Component {
             modalContent: "Simple skill modal content.",
             modalTitle: "Modal title",
             projectList: []
-        }
-    }
-
-    componentWillMount() {
-        const {name} = this.props.router.params
-        if(name !== "all") {
-            switch(name) {
-                case "synergy":
-                    this.openSkillModal("synergie");
-                    break;
-                default:
-                    break;
-            }
         }
     }
 
