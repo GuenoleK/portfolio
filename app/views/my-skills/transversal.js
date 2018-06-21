@@ -34,7 +34,7 @@ export class TransversalSkills extends React.Component {
             <Card
                 title="Vulgarisation du langage" 
                 skillLevel={75}
-                content="C’est, selon moi, la capacité de faire comprendre des notions, dans mon cas très souvent technique, a un public qui n’est pas amené à connaître le langage utilisé dans mon domaine d’expertise ..." 
+                content="C’est la capacité de faire comprendre des notions a un public qui n’est pas amené à connaître le langage utilisé dans mon domaine d’expertise ..." 
                 onClick={() => this.openSkillModal("communication") }
                 buttonName="Lire plus" />
             <Card 
@@ -46,8 +46,8 @@ export class TransversalSkills extends React.Component {
             <Card 
                 title="Esprit d'équipe" 
                 skillLevel={75}
-                content="J'ai pu observer que je savais créer une synergie de compétences et de personnalités ..." 
-                onClick={() => this.openSkillModal("synergie") }
+                content="Travailler en équipe, participer activement pour un objectif commun, collaborer avec les autres et privilégier la réussite du groupe. C’est cela pour moi l’esprit d’équipe ..." 
+                onClick={() => this.openSkillModal("teamSpirit") }
                 buttonName="Lire plus" />
             <Card 
                 title="Force de proposition" 
@@ -85,6 +85,15 @@ export class TransversalSkills extends React.Component {
                     "Compétence transverce",
                     <span>
                         <Article headline="Vulgarisation du langage" content ={skillsTextsRender.renderCommunicationArticleContent()} />
+                    </span>,
+                    [{name: "It'School", link: "it-school"}]
+                )
+            break;
+            case "teamSpirit":
+                this.props.openModal(
+                    "Compétence transverce",
+                    <span>
+                        <Article headline="Esprit d'équipe" content ={skillsTextsRender.renderTeamSpiritArticleContent()} />
                     </span>,
                     [{name: "It'School", link: "it-school"}]
                 )
