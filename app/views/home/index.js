@@ -62,11 +62,11 @@ export class HomeView extends PureComponent {
                         buttonProps={[
                             {
                                 buttonName: "Compétences techniques",
-                                link: "/my-skills/technical"
+                                link: "/my-skills/technical/all"
                             },
                             {
                                 buttonName: "Compétences transverses",
-                                link: "/my-skills/transversal"
+                                link: "/my-skills/transversal/all"
                             }
                         ]}
                         type="home"
