@@ -23,7 +23,7 @@ export default {
             component: AboutMeView
         },
         {
-            path: 'my-skills/:name',
+            path: 'my-skills/:name/:skill',
             component: MySkillsView
         },
         {

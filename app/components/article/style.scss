@@ -5,6 +5,22 @@
   .article-content{
     font-size: 22px;
     padding-top: 25px;
-    padding: 25px 50px 0px 50px;
+    padding: 25px 55px 0px 55px;
+
+    
+
+    .skills-cards,
+    .achievements-cards {
+      flex-flow: wrap;
+      display: flex;
+      padding: 15px;
+      justify-content: center;
+
+      [data-component="-portfolio-card"] {
+          margin-right: 25px;
+          margin-bottom: 25px;
+          width: 400px;
+      }
+    }
   }
 }

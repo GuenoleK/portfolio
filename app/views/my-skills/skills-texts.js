@@ -99,6 +99,28 @@ class SkillsTextsRender {
             </div>
         )
     }
+
+    renderTeamSpiritArticleContent() {
+        return(
+            <div>
+                Travailler en équipe, participer activement pour un objectif commun dans des projets en groupe, collaborer avec les autres et privilégier la réussite du groupe. C’est cela pour moi l’esprit d’équipe. J’estime que cela est essentiel dans la voie que j’emprunte dans le monde de l’informatique.<br/><br/>
+
+                Durant toute ma scolarité d’ingénierie du logiciel, j’ai été amené à travailler en équipe. Cela fait partie de la pédagogie d’IN’TECH et pour moi c’est une force de travailler en équipe. Les connaissances et les capacités de l’un sont très souvent complémentaires avec celles des autres.<br/>
+                En plus de projets techniques, IN’TECH propose aussi des projets de « formation humaines » aussi appelés PFH.<br/>
+                C’est projet nous servent à développer et constater nos compétences humaines à travers des projets non techniques qui nous poussent à privilégier le contact humain.<br/>
+                Un des projets dans lequel j’ai été amené à être était une expérience durant laquelle moi équipe et moi devions aider une association localisée à Ivry-Sur-Seine de prendre ses marques dans la ville et attirer le public qu’elle ciblait.<br/>
+                Cette structure propose de l’aide scolaire pour les étudiants à partir du collège jusqu’aux études supérieurs.<br/>
+                Le but est d’aider les jeunes avec des l’apport de bénévoles en se retrouvant dans un local pour travailler sur une matière que l’élève a choisi d’approfondir.<br/> 
+                L’enjeu de ce projet était non seulement de communiquer dans la ville que cette association existe mais aussi, pour nous, de pouvoir travailler ensemble.<br/>
+                Cela n’était pas chose facile car dans cette équipe il y avait des tempéraments forts qui créaient assez rapidement des frictions. Mon rôle, en tant que chef de projet, était de créer une synergie entre toutes les compétences et les personnalités. C’était aussi de rappeler que l’objectif était un objectif qui nous rassemblait et qui permettrait à d’autres jeunes de bénéficier d’une aide non négligeable. Mon esprit d’équipe ne me permettait ni de laisser qui que ce soit à l’écart, ni de faire toutes les tâches tout seul ou encore d’abandonner le projet.<br/>
+                J’aime énormément susciter cette synergie qui au final nous a valu les félicitations de notre enseignante chargée des PFH.<br/>
+                Ma contribution directe et indirecte était importante, et cela est une philosophie que garde encore aujourd’hui dans les différents projets dans lesquels je travaille.<br/><br/>
+
+                J’ai appris à découvrir cette capacité en remarquant que je peux faire des projets seuls, cependant, j’aime énormément travailler avec d’autres personnes.<br/>
+                Cela est stimulant car l’échange de connaissance est quelque chose que je valorise et qui me permet de découvrir.
+            </div>
+        );
+    }
 }
 
 export const skillsTextsRender = new SkillsTextsRender();
