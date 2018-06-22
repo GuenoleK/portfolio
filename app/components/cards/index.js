@@ -44,6 +44,14 @@ export class Card extends PureComponent {
         });
     };
 
+    renderButtons() {
+        return this.props.buttonProps.map(({buttonName, link, onClick}) => {
+            const cardButton = <Button color="primary" onClick={onClick}>{buttonName}</Button>
+            const linkCardButton = <Button raised color="primary" onClick={onClick}>{buttonName}</Button>
+            return link ?  <Link to={link}>{linkCardButton}</Link> : cardButton;
+        })
+    }
+
 
     renderButton() {
         const cardButton = <Button color="primary" onClick={this.props.onClick}>{this.props.buttonName}</Button>
@@ -77,7 +85,7 @@ export class Card extends PureComponent {
                     </h4>
                 </div>
                  <div data-component="card-bottom" className="mdl-card__actions mdl-card--border">
-                     {this.renderButton()}
+                     {this.renderButtons()}
                 </div>
             </div>
         )

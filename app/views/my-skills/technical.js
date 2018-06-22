@@ -21,38 +21,74 @@ export class TechnicalSkills extends React.Component {
     }
 
     render() {
+        const readMoreText = "Lire plus";
         return(
             <div className="skills-cards">
                 <Card
                     title="Javascript" 
                     skillLevel={75}
                     content="J'ai pu observer que je savais créer une synergie de compétences et de personnalités ..." 
-                    onClick={() => this.openSkillModal("synergie") }
-                    buttonName="Lire plus" />
+                    buttonProps={[
+                        {
+                            buttonName: readMoreText,
+                            onClick: () => this.openSkillModal("synergie")
+                        }
+                    ]}
+                />
+                <Card 
+                    title="Prox'ITI" 
+                    content="L'association Proxité agit au coeur des quartiers populaires en faveur de l'insertion scolaire et professionnelle des jeunes ..." 
+                    buttonProps={[
+                        {
+                            buttonName: readMoreText,
+                            onClick: () => this.openSkillModal("synergie")
+                        }
+                    ]}
+                />
                 <Card 
                     title="ReactJs" 
                     skillLevel={80}
                     content="J'ai pu observer que je savais créer une synergie de compétences et de personnalités ..." 
-                    onClick={() => this.openSkillModal("synergie") }
-                    buttonName="Lire plus" />
+                    buttonProps={[
+                        {
+                            buttonName: readMoreText,
+                            onClick: () => this.openSkillModal("synergie")
+                        }
+                    ]}
+                />
                 <Card 
                     title="C#" 
                     skillLevel={60}
                     content="J'ai pu observer que je savais créer une synergie de compétences et de personnalités ..." 
-                    onClick={() => this.openSkillModal("synergie") }
-                    buttonName="Lire plus" />
+                    buttonProps={[
+                        {
+                            buttonName: readMoreText,
+                            onClick: () => this.openSkillModal("synergie")
+                        }
+                    ]}
+                />
                 <Card 
                     title="SQL" 
                     skillLevel={50}
                     content="J'ai pu observer que je savais créer une synergie de compétences et de personnalités ..." 
-                    onClick={() => this.openSkillModal("synergie") }
-                    buttonName="Lire plus" />
+                    buttonProps={[
+                        {
+                            buttonName: readMoreText,
+                            onClick: () => this.openSkillModal("synergie")
+                        }
+                    ]}
+                />
                 <Card 
                     title="Java" 
                     skillLevel={40}
                     content="J'ai pu observer que je savais créer une synergie de compétences et de personnalités ..." 
-                    onClick={() => this.openSkillModal("synergie") }
-                    buttonName="Lire plus" />
+                    buttonProps={[
+                        {
+                            buttonName: readMoreText,
+                            onClick: () => this.openSkillModal("synergie")
+                        }
+                    ]}
+                />
             </div>
         );
     }

@@ -60,23 +60,29 @@ export class MyAchievementsView extends PureComponent {
     }
 
     achivementCardContent() {
+        const readMoreText = "Lire plus";
         return(
             <div className="achievements-cards">
                 <Card 
                     title="It'School" 
                     content="Au sein des écoles, les institutrices sont souvent confrontées à des problèmes logistiques ..." 
-                    onClick={() => this.openAchievementModal("it'school") }
-                    buttonName="Lire plus" />
-                <Card 
-                    title="Focus" 
-                    content="Lors de mon stage de 3e année d’étude j’ai intégré l’équipe Focus qui a été un pôle « Innovation » au sein de KLEE Group ..." 
-                    onClick={() => this.openAchievementModal("focus") }
-                    buttonName="Lire plus" />
+                    buttonProps={[
+                        {
+                            buttonName: readMoreText,
+                            onClick: () => this.openAchievementModal("it-school")
+                        }
+                    ]}
+                />
                 <Card 
                     title="Prox'ITI" 
                     content="L'association Proxité agit au coeur des quartiers populaires en faveur de l'insertion scolaire et professionnelle des jeunes ..." 
-                    onClick={() => this.openAchievementModal("prox'iti") }
-                    buttonName="Lire plus" />
+                    buttonProps={[
+                        {
+                            buttonName: readMoreText,
+                            onClick: () => this.openAchievementModal("prox-iti")
+                        }
+                    ]}
+                />
             </div>
         )
     }

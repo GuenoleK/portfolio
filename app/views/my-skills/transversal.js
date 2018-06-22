@@ -44,38 +44,53 @@ export class TransversalSkills extends React.Component {
     }
 
     render() {
+        const readMoreText = "Lire plus";
         return(
             <div className="skills-cards">
-            <Card 
-                title="Curiosité" 
-                skillLevel={80}
-                content="Je définirais la curiosité comme le fait d’avoir un vif intérêt à découvrir, connaître et apprendre de nouv..." 
-                onClick={() => this.openSkillModal("curiosity")}
-                buttonName="Lire plus" />
-            <Card
-                title="Vulgarisation du langage" 
-                skillLevel={75}
-                content="C’est la capacité de faire comprendre des notions a un public qui n’est pas amené à connaître le langage utilisé dans mon domaine d’expertise ..." 
-                onClick={() => this.openSkillModal("communication")}
-                buttonName="Lire plus" />
-            <Card 
-                title="Persévérance" 
-                skillLevel={70}
-                content="C'est la capacité de tout mettre en œuvre, et cela malgré les difficultés qui peuvent se présenter..." 
-                onClick={() => this.openSkillModal("perseverance")}
-                buttonName="Lire plus" />
-            <Card 
-                title="Esprit d'équipe" 
-                skillLevel={75}
-                content="Travailler en équipe, participer activement pour un objectif commun, collaborer avec les autres et privilégier la réussite du groupe. C’est cela pour moi l’esprit d’équipe ..." 
-                onClick={() => this.openSkillModal("teamSpirit")}
-                buttonName="Lire plus" />
-            <Card 
-                title="Force de proposition" 
-                skillLevel={70}
-                content="J'ai pu observer que je savais créer une synergie de compétences et de personnalités ..." 
-                onClick={() => this.openSkillModal("synergie")}
-                buttonName="Lire plus" />
+                <Card 
+                    title="Curiosité" 
+                    skillLevel={80}
+                    content="Je définirais la curiosité comme le fait d’avoir un vif intérêt à découvrir, connaître et apprendre de nouv..." 
+                    buttonProps={[
+                        {
+                            buttonName: readMoreText,
+                            onClick: () => this.openSkillModal("curiosity")
+                        }
+                    ]}
+                />
+                <Card
+                    title="Vulgarisation du langage" 
+                    skillLevel={75}
+                    content="C’est la capacité de faire comprendre des notions a un public qui n’est pas amené à connaître le langage utilisé dans mon domaine d’expertise ..." 
+                    buttonProps={[
+                        {
+                            buttonName: readMoreText,
+                            onClick: () => this.openSkillModal("communication")
+                        }
+                    ]}
+                />
+                <Card 
+                    title="Persévérance" 
+                    skillLevel={70}
+                    content="C'est la capacité de tout mettre en œuvre, et cela malgré les difficultés qui peuvent se présenter..." 
+                    buttonProps={[
+                        {
+                            buttonName: readMoreText,
+                            onClick: () => this.openSkillModal("perseverance")
+                        }
+                    ]}
+                />
+                <Card 
+                    title="Esprit d'équipe" 
+                    skillLevel={75}
+                    content="Travailler en équipe, participer activement pour un objectif commun, collaborer avec les autres et privilégier la réussite du groupe. C’est cela pour moi l’esprit d’équipe ..." 
+                    buttonProps={[
+                        {
+                            buttonName: readMoreText,
+                            onClick: () => this.openSkillModal("teamSpirit")
+                        }
+                    ]}
+                />
             </div>
         );
     }

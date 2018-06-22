@@ -51,11 +51,30 @@ const config = {
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
-        loaders: [
-          'file?hash=sha512&digest=hex&name=[hash].[ext]',
-          'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
-        ]
-      } 
+        loader: 'file-loader',
+        query: {
+          hash: 'sha512',
+          digest: 'hex',
+          name: '[hash].[ext]'
+        }
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        loader: 'image-webpack-loader',
+        options: {
+          query: {
+            mozjpeg: {
+              progressive: true,
+            },
+            gifsicle: {
+              interlaced: true,
+            },
+            optipng: {
+              optimizationLevel: 7,
+            }
+          }
+        }
+      }
     ],
   },
 };

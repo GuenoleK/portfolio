@@ -41,49 +41,69 @@ export class HomeView extends PureComponent {
                                 <br/>
                                 Apprennez-en plus sur moi.
                             </span>
-                        } 
-                        buttonName="Qui suis-je ?"
-                        link="/about-me"
+                        }
+                        buttonProps={[
+                            {
+                                buttonName: "Qui suis-je ?",
+                                link: "/about-me"
+                            }
+                        ]}
                         type="home"
                     />
                 </Parallax>
                 <Parallax id="home-my-skills" className="home-my-skills" bgImage={require('../../assets/preview.png')} strength={400}>
                     <Card 
-                        content={<span>
-                                Découvrez
-                                <br/>
-                                les compétences que j'ai acquis
-                                <br/>
+                        content={
+                            <span>
+                                Découvrez <br/>
+                                les compétences que j'ai acquis<br/>
                                 au fil des mes expériences
                             </span>}
-                        buttonName="Mes compétences"
-                        link="/my-skills/all" 
+                        buttonProps={[
+                            {
+                                buttonName: "Compétences techniques",
+                                link: "/my-skills/technical"
+                            },
+                            {
+                                buttonName: "Compétences transverses",
+                                link: "/my-skills/transversal"
+                            }
+                        ]}
                         type="home"
                     />
                 </Parallax>
                 <Parallax id="home-my-achievements" className="home-my-achievements" bgImage={require('../../assets/preview.gif')} strength={400}>
                     <Card 
-                        content={<span>
-                                Découvrez
-                                <br/>
+                        content={
+                            <span>
+                                Découvrez<br/>
                                 l'ensemble de mes réalisations
-                            </span>} 
-                        buttonName="Mes réalisations"
-                        link="/my-achievements/all" 
+                            </span>
+                        } 
+                        buttonProps={[
+                            {
+                                buttonName: "Mes réalisations",
+                                link: "/my-achievements/all"
+                            }
+                        ]}
                         type="home"
                     />
                 </Parallax>
                 <Parallax id="home-my-career" className="home-my-career" bgImage={require('../../assets/preview (1).png')} strength={400}>
                     <Card 
-                        content={<span>
-                            Découvrez
-                            <br/>
-                            les lieux où j'ai pu mettre en pratique
-                            <br/>
-                            et développer l'ensemble de mes compétences
-                            </span>} 
-                        buttonName="Mon expérience"
-                        link="/my-career" 
+                        content={
+                            <span>
+                                Découvrez<br/>
+                                les lieux où j'ai pu mettre en pratique<br/>
+                                et développer l'ensemble de mes compétences
+                            </span>
+                        } 
+                        buttonProps={[
+                            {
+                                buttonName: "Mon expérience",
+                                link: "/my-career"
+                            }
+                        ]}
                         type="home"
                     />
                 </Parallax>
