@@ -15,7 +15,8 @@ export class MyAchievementsView extends PureComponent {
             isModalopen: false,
             modalContent: "Simple achievement modal content.",
             modalTitle: "Modal title",
-            skillList: []
+            skillList: [],
+            currentPath: "/my-achievements/"
         }
     }
 
@@ -23,8 +24,17 @@ export class MyAchievementsView extends PureComponent {
         window.scrollTo(0, 0)
         const {name} = this.props.router.params
         switch(name) {
-            case "it'school":
-                this.openAchievementModal("it'school");
+            case "it-school":
+                this.openAchievementModal("it-school");
+                break;
+            case "focus":
+                this.openAchievementModal("focus");
+                break;
+            case "portfolio":
+                this.openAchievementModal("portfolio");
+                break;
+            case "prox-iti":
+                this.openAchievementModal("prox-iti");
                 break;
             default:
                 break;
@@ -74,6 +84,26 @@ export class MyAchievementsView extends PureComponent {
                     ]}
                 />
                 <Card 
+                    title="Focus" 
+                    content="Lors de mon stage de 3e année d’étude j’ai intégré l’équipe Focus qui a été un pôle « Innovation » au sein de KLEE Group ..." 
+                    buttonProps={[
+                        {
+                            buttonName: readMoreText,
+                            onClick: () => this.openAchievementModal("focus")
+                        }
+                    ]}
+                />
+                <Card 
+                    title="Portfolio" 
+                    content="Lors de mon stage de 3e année d’étude j’ai intégré l’équipe Focus qui a été un pôle « Innovation » au sein de KLEE Group ..." 
+                    buttonProps={[
+                        {
+                            buttonName: readMoreText,
+                            onClick: () => this.openAchievementModal("portfolio")
+                        }
+                    ]}
+                />
+                <Card 
                     title="Prox'ITI" 
                     content="L'association Proxité agit au coeur des quartiers populaires en faveur de l'insertion scolaire et professionnelle des jeunes ..." 
                     buttonProps={[
@@ -88,9 +118,10 @@ export class MyAchievementsView extends PureComponent {
     }
 
     openAchievementModal(type) {
+        this.achievementNavigation(type);
         const headerTitle = `Réalisation : ${capitalize(type)}`
         switch(type) {
-            case "it'school":
+            case "it-school":
                 this.setState({
                     modalTitle: headerTitle,
                     modalContent:
@@ -100,12 +131,12 @@ export class MyAchievementsView extends PureComponent {
                     skillList: [{name: "Curiosité", link: "transversal/curiosity"}]
                 });
                 break;
-            case "prox'iti":
+            case "prox-iti":
                 this.setState({
                     modalTitle: headerTitle,
                     modalContent:
                     <span>
-                        <Article headline="Prox'ITI" content ={achievementsTextsRender.renderProxItiArticleContent()} renderButtonSkillsSecction={this.renderSkillListButtons}/>
+                        <Article headline="prox-iti" content ={achievementsTextsRender.renderProxItiArticleContent()} renderButtonSkillsSecction={this.renderSkillListButtons}/>
                     </span>,
                     skillList: [{name: "Esprit d'équipe", link: "transversal/teamSpirit"}]
                 });
@@ -143,6 +174,7 @@ export class MyAchievementsView extends PureComponent {
 
     handleRequestClose = value => {
         this.setState({ isModalopen: false });
+        this.achievementNavigation("all");
     };
 
     renderSkillListButtons = () => {
@@ -150,12 +182,16 @@ export class MyAchievementsView extends PureComponent {
             <div data-component="modal-skill-list">
                 <h5>{this.state.skillList.length > 1 ? "Compétence associés" : "Compétence associé"}</h5>
                 {
-                    this.state.skillList.map(skill => {
-                        return <Link to={`/my-skills/${skill.link}`}><Button variant="raised" color="secondary">{skill.name}</Button></Link>
+                    this.state.skillList.map((skill, idx) => {
+                        return <Link className="link-list" to={`/my-skills/${skill.link}`}><Button className={`list-button${this.state.skillList.length === 1 ? `-${idx}` : ""}`} variant="raised" color="secondary">{skill.name}</Button></Link>
                     })
                 }
             </div>
 
         );
+    }
+    
+    achievementNavigation(path) {
+        this.props.router.push(`${this.state.currentPath}${path}`);
     }
 }

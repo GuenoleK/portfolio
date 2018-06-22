@@ -33,4 +33,11 @@
   h4 {
     font-weight: bold !important;
   }
+
+  .link-list {
+    text-decoration: none;
+    .list-button {
+      margin-right: 5px;
+    }
+  }
 }

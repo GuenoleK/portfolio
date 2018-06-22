@@ -35,16 +35,13 @@ export class HomeView extends PureComponent {
                     <Card 
                         content={
                             <span>
-                                Je m'appelle Guénolé Kikabou
-                                <br/>
-                                et je suis étudiant en ingénierie du logiciel.
-                                <br/>
-                                Apprennez-en plus sur moi.
+                                L'être humain est important, selon moi, et cela même pour le métier de l'informatique.<br/><br/>
+                                Dans une ère où l'évolution technologique prime, j'aime participer à l'amélioration du quotidien grâce à mon métier.
                             </span>
                         }
                         buttonProps={[
                             {
-                                buttonName: "Qui suis-je ?",
+                                buttonName: "Apprenez-en plus",
                                 link: "/about-me"
                             }
                         ]}
@@ -55,9 +52,7 @@ export class HomeView extends PureComponent {
                     <Card 
                         content={
                             <span>
-                                Découvrez <br/>
-                                les compétences que j'ai acquis<br/>
-                                au fil des mes expériences
+                                Découvrez les compétences que j'ai pu acquérir au fil des mes expériences
                             </span>}
                         buttonProps={[
                             {
