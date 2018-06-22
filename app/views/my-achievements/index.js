@@ -23,8 +23,8 @@ export class MyAchievementsView extends PureComponent {
         window.scrollTo(0, 0)
         const {name} = this.props.router.params
         switch(name) {
-            case "it-school":
-                this.openAchievementModal("it-school");
+            case "it'school":
+                this.openAchievementModal("it'school");
                 break;
             default:
                 break;
@@ -48,8 +48,6 @@ export class MyAchievementsView extends PureComponent {
                     <DialogContent>
                         <DialogContentText>
                             {this.state.modalContent}
-                            <br/>
-                            {this.renderSkillListButtons()}
                         </DialogContentText>
                     </DialogContent>
                 </Dialog>
@@ -67,42 +65,68 @@ export class MyAchievementsView extends PureComponent {
                 <Card 
                     title="It'School" 
                     content="Au sein des écoles, les institutrices sont souvent confrontées à des problèmes logistiques ..." 
-                    onClick={() => this.openAchievementModal("it-school") }
+                    onClick={() => this.openAchievementModal("it'school") }
+                    buttonName="Lire plus" />
+                <Card 
+                    title="Focus" 
+                    content="Lors de mon stage de 3e année d’étude j’ai intégré l’équipe Focus qui a été un pôle « Innovation » au sein de KLEE Group ..." 
+                    onClick={() => this.openAchievementModal("focus") }
                     buttonName="Lire plus" />
                 <Card 
                     title="Prox'ITI" 
                     content="L'association Proxité agit au coeur des quartiers populaires en faveur de l'insertion scolaire et professionnelle des jeunes ..." 
-                    onClick={() => this.openAchievementModal("prox-iti") }
+                    onClick={() => this.openAchievementModal("prox'iti") }
                     buttonName="Lire plus" />
             </div>
         )
     }
 
     openAchievementModal(type) {
+        const headerTitle = `Réalisation : ${capitalize(type)}`
         switch(type) {
-            case "it-school":
+            case "it'school":
                 this.setState({
-                    modalTitle: capitalize("Réalisation"),
+                    modalTitle: headerTitle,
                     modalContent:
                     <span>
-                        <Article headline="It'School" content ={achievementsTextsRender.renderItSchoolArticleContent()} />
+                        <Article headline="It'School" content ={achievementsTextsRender.renderItSchoolArticleContent()} renderButtonSkillsSecction={this.renderSkillListButtons}/>
                     </span>,
                     skillList: [{name: "Curiosité", link: "transversal/curiosity"}]
                 });
                 break;
-            case "prox-iti":
+            case "prox'iti":
                 this.setState({
-                    modalTitle: capitalize("Réalisation"),
+                    modalTitle: headerTitle,
                     modalContent:
                     <span>
-                        <Article headline="Prox'ITI" content ={achievementsTextsRender.renderProxItiArticleContent()} />
+                        <Article headline="Prox'ITI" content ={achievementsTextsRender.renderProxItiArticleContent()} renderButtonSkillsSecction={this.renderSkillListButtons}/>
                     </span>,
-                    skillList: [{name: "Esprit d'équipe", link: "transversal"}]
+                    skillList: [{name: "Esprit d'équipe", link: "transversal/teamSpirit"}]
+                });
+                break;
+            case "focus":
+                this.setState({
+                    modalTitle: headerTitle,
+                    modalContent:
+                    <span>
+                        <Article headline="Focus" content ={achievementsTextsRender.renderFocusArticleContent()} renderButtonSkillsSecction={this.renderSkillListButtons}/>
+                    </span>,
+                    skillList: [{name: "JavaScript", link: "technical/javascript"}, {name: "GitHub", link: "technical/github"}]
+                });
+                break;
+            case "portfolio":
+                this.setState({
+                    modalTitle: headerTitle,
+                    modalContent:
+                    <span>
+                        <Article headline="Portfolio" content ={achievementsTextsRender.renderProxItiArticleContent()} renderButtonSkillsSecction={this.renderSkillListButtons}/>
+                    </span>,
+                    skillList: [{name: "JavaScript", link: "technical/javascript"}, {name: "GitHub", link: "technical/github"}]
                 });
                 break;
             default:
                 this.setState({
-                    modalTitle: "Réalisation",
+                    modalTitle: headerTitle,
                     modalContent: "Réalisation à venir.",
                     skillList: []
                 });
@@ -115,12 +139,17 @@ export class MyAchievementsView extends PureComponent {
         this.setState({ isModalopen: false });
     };
 
-    renderSkillListButtons() {
-        return this.state.skillList.map(skill => {
-            return <div data-component="modal-skill-list">
-                    <h5>{this.state.skillList.length > 1 ? "Compétence associés" : "Compétence associé"}</h5>
-                    <Link to={`/my-skills/${skill.link}`}><Button raised color="accent">{skill.name}</Button></Link>
-                </div>
-        })
+    renderSkillListButtons = () => {
+        return(
+            <div data-component="modal-skill-list">
+                <h5>{this.state.skillList.length > 1 ? "Compétence associés" : "Compétence associé"}</h5>
+                {
+                    this.state.skillList.map(skill => {
+                        return <Link to={`/my-skills/${skill.link}`}><Button variant="raised" color="secondary">{skill.name}</Button></Link>
+                    })
+                }
+            </div>
+
+        );
     }
 }

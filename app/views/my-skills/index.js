@@ -5,9 +5,8 @@ import {Link} from "react-router";
 import {Article} from "../../components/article";
 import {TechnicalSkills} from "./technical";
 import {TransversalSkills} from "./transversal";
-import {Slide, AppBar, Toolbar, IconButton, CloseIcon, Tooltip, Typography, Button, Collapse, Dialog, DialogTitle, DialogContent, DialogContentText} from "material-ui";
+import {Slide, AppBar, Toolbar, IconButton, Typography, Button, Collapse, Dialog, DialogTitle, DialogContent, DialogContentText} from "material-ui";
 import "./style.scss";
-
 
 export class MySkillsView extends React.Component {
 
@@ -90,10 +89,12 @@ export class MySkillsView extends React.Component {
 
     renderProjectListButtons() {
         return this.state.projectList.map(project => {
-            return <div data-component="modal-project-list">
+            return(
+                <div data-component="modal-project-list">
                     <h5>{this.state.projectList.length > 1 ? "Projets associés" : "Projet associé"}</h5>
                     <Link to={`/my-achievements/${project.link}`}><Button raised color="accent">{project.name}</Button></Link>
                 </div>
-        })
+            );
+        });
     }
 }

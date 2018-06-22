@@ -50,31 +50,31 @@ export class TransversalSkills extends React.Component {
                 title="Curiosité" 
                 skillLevel={80}
                 content="Je définirais la curiosité comme le fait d’avoir un vif intérêt à découvrir, connaître et apprendre de nouv..." 
-                onClick={() => this.openSkillModal("curiosity") }
+                onClick={() => this.openSkillModal("curiosity")}
                 buttonName="Lire plus" />
             <Card
                 title="Vulgarisation du langage" 
                 skillLevel={75}
                 content="C’est la capacité de faire comprendre des notions a un public qui n’est pas amené à connaître le langage utilisé dans mon domaine d’expertise ..." 
-                onClick={() => this.openSkillModal("communication") }
+                onClick={() => this.openSkillModal("communication")}
                 buttonName="Lire plus" />
             <Card 
                 title="Persévérance" 
                 skillLevel={70}
                 content="C'est la capacité de tout mettre en œuvre, et cela malgré les difficultés qui peuvent se présenter..." 
-                onClick={() => this.openSkillModal("perseverance") }
+                onClick={() => this.openSkillModal("perseverance")}
                 buttonName="Lire plus" />
             <Card 
                 title="Esprit d'équipe" 
                 skillLevel={75}
                 content="Travailler en équipe, participer activement pour un objectif commun, collaborer avec les autres et privilégier la réussite du groupe. C’est cela pour moi l’esprit d’équipe ..." 
-                onClick={() => this.openSkillModal("teamSpirit") }
+                onClick={() => this.openSkillModal("teamSpirit")}
                 buttonName="Lire plus" />
             <Card 
                 title="Force de proposition" 
                 skillLevel={70}
                 content="J'ai pu observer que je savais créer une synergie de compétences et de personnalités ..." 
-                onClick={() => this.openSkillModal("synergie") }
+                onClick={() => this.openSkillModal("synergie")}
                 buttonName="Lire plus" />
             </div>
         );
@@ -99,7 +99,7 @@ export class TransversalSkills extends React.Component {
                         <Article headline="Curiosité" content ={skillsTextsRender.renderCuriosityArticleContent()} />
                     </span>,
                     [{name: "It'School", link: "it-school"}]
-                )
+                );
             break;
             case "communication":
                 this.props.openModal(
@@ -108,7 +108,7 @@ export class TransversalSkills extends React.Component {
                         <Article headline="Vulgarisation du langage" content ={skillsTextsRender.renderCommunicationArticleContent()} />
                     </span>,
                     [{name: "It'School", link: "it-school"}]
-                )
+                );
             break;
             case "teamSpirit":
                 this.props.openModal(
@@ -117,7 +117,7 @@ export class TransversalSkills extends React.Component {
                         <Article headline="Esprit d'équipe" content ={skillsTextsRender.renderTeamSpiritArticleContent()} />
                     </span>,
                     [{name: "It'School", link: "it-school"}]
-                )
+                );
             break;
             default:
                 this.props.openModal(

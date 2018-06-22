@@ -8,6 +8,10 @@
     padding: 25px 55px 0px 55px;
 
     
+    
+    ul > li {
+      font-size: 21px;
+    }
 
     .skills-cards,
     .achievements-cards {
@@ -22,5 +26,11 @@
           width: 400px;
       }
     }
+  }
+}
+
+[role="dialog"] {
+  h4 {
+    font-weight: bold !important;
   }
 }
