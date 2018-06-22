@@ -6,20 +6,4 @@
         flex: 0 1 100%;
         padding-left: 20px;
     }
-
-    .article-content {
-
-        .skills-cards {
-            flex-flow: wrap;
-            display: flex;
-            padding: 15px;
-            justify-content: center;
-    
-            [data-component="-portfolio-card"] {
-                margin-right: 25px;
-                margin-bottom: 25px;
-                width: 400px;
-            }
-        }
-    }
 }

@@ -22,6 +22,27 @@ export class TransversalSkills extends React.Component {
         }
     }
 
+    componentWillMount() {
+        window.scrollTo(0, 0)
+        const {skill} = this.props.router.params
+        switch(skill) {
+            case "curiosity":
+            this.openSkillModal(skill);
+                break;
+            case "communication":
+            this.openSkillModal(skill);
+                break;
+            case "perseverance":
+            this.openSkillModal(skill);
+                break;
+            case "team-spirit":
+            this.openSkillModal(skill);
+                break;
+            default:
+                break;
+        }
+    }
+
     render() {
         return(
             <div className="skills-cards">

@@ -71,10 +71,14 @@ export class Layout extends PureComponent {
         window.location.href = "mailto:kikabouguenole@gmail.com&subject=We want you !";
     }
 
+    getMenuListActiveClassName(location) {
+        const pathArrayString = this.props.router.location.pathname.split("/");
+        return pathArrayString.find(param => param === location);
+    }
 
     render() {
         const {anchorEl} = this.state;
-        const menuListActiveClassName = this.props.params.name === "technical" || this.props.params.name === "transversal" ? "active-link" : ""
+
         return(
             <div data-component="layout" id="layout">
                 <div data-component="header" id="header-layout" className={`${this.state.headerClassName}`}>
@@ -88,7 +92,7 @@ export class Layout extends PureComponent {
                             </HeaderLink>
                             <HeaderLink
                                 id="simple-menu"
-                                className={`mdl-button mdl-js-button mdl-js-ripple-effect header-link ${menuListActiveClassName}`}
+                                className={`mdl-button mdl-js-button mdl-js-ripple-effect header-link ${this.getMenuListActiveClassName("my-skills") ? "active-link" : ""}`}
                                 aria-owns={anchorEl ? 'simple-menu' : null} aria-haspopup="true" onClick={this.handleClick}>
                                 Mes compétences
                             </HeaderLink>
@@ -97,10 +101,10 @@ export class Layout extends PureComponent {
                                 anchorEl={anchorEl}
                                 open={Boolean(anchorEl)}
                                 onClose={this.handleClose}>
-                                <MenuItem onClick={() => this.nextPath("/my-skills/technical")}>Compétences Techniques</MenuItem>
-                                <MenuItem onClick={() => this.nextPath("/my-skills/transversal")}>Compétences Transverses</MenuItem>
+                                <MenuItem onClick={() => this.nextPath("/my-skills/technical/all")}>Compétences Techniques</MenuItem>
+                                <MenuItem onClick={() => this.nextPath("/my-skills/transversal/all")}>Compétences Transverses</MenuItem>
                             </Menu>
-                            <HeaderLink to="/my-achievements/all" id="header-link-achievements" className="mdl-button mdl-js-button mdl-js-ripple-effect header-link">
+                            <HeaderLink to="/my-achievements/all" id="header-link-achievements" className={`mdl-button mdl-js-button mdl-js-ripple-effect header-link ${this.getMenuListActiveClassName("my-achievements") ? "active-link" : ""}`} >
                                 Mes réalisations
                             </HeaderLink>
                             <HeaderLink to="my-career" id="header-link-career" className="mdl-button mdl-js-button mdl-js-ripple-effect header-link">

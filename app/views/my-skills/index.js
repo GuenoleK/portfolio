@@ -24,14 +24,12 @@ export class MySkillsView extends React.Component {
     componentWillMount() {
         window.scrollTo(0, 0)
         const {name} = this.props.router.params
-        if(name !== "all") {
-            switch(name) {
-                case "synergy":
-                    this.openSkillModal("synergie");
-                    break;
-                default:
-                    break;
-            }
+        switch(name) {
+            case "synergy":
+                this.openSkillModal("synergie");
+                break;
+            default:
+                break;
         }
     }
 
