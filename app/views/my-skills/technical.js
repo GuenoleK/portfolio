@@ -5,6 +5,8 @@ import {Collapse, Dialog, DialogTitle, DialogContent, DialogContentText } from '
 import {capitalize} from "lodash";
 import {Link} from "react-router";
 import {Article} from "../../components/article";
+import {skillsTextsRender} from "./skills-texts";
+import {skillsActions} from "./skills-actions";
 import "./style.scss";
 
 
@@ -25,23 +27,24 @@ export class TechnicalSkills extends React.Component {
         return(
             <div className="skills-cards">
                 <Card
-                    title="Javascript" 
+                    title="JavaScript" 
                     skillLevel={75}
                     content="J'ai pu observer que je savais créer une synergie de compétences et de personnalités ..." 
                     buttonProps={[
                         {
                             buttonName: readMoreText,
-                            onClick: () => this.openSkillModal("synergie")
+                            onClick: () => this.openSkillModal("javascript", "JavaScript")
                         }
                     ]}
                 />
                 <Card 
-                    title="Prox'ITI" 
+                    title="Git" 
+                    skillLevel={75}
                     content="L'association Proxité agit au coeur des quartiers populaires en faveur de l'insertion scolaire et professionnelle des jeunes ..." 
                     buttonProps={[
                         {
                             buttonName: readMoreText,
-                            onClick: () => this.openSkillModal("synergie")
+                            onClick: () => this.openSkillModal("git", "Git")
                         }
                     ]}
                 />
@@ -52,29 +55,29 @@ export class TechnicalSkills extends React.Component {
                     buttonProps={[
                         {
                             buttonName: readMoreText,
-                            onClick: () => this.openSkillModal("synergie")
+                            onClick: () => this.openSkillModal("react", "ReactJS")
                         }
                     ]}
                 />
                 <Card 
                     title="C#" 
-                    skillLevel={60}
+                    skillLevel={70}
                     content="J'ai pu observer que je savais créer une synergie de compétences et de personnalités ..." 
                     buttonProps={[
                         {
                             buttonName: readMoreText,
-                            onClick: () => this.openSkillModal("synergie")
+                            onClick: () => this.openSkillModal("csharp", "C#")
                         }
                     ]}
                 />
                 <Card 
                     title="SQL" 
-                    skillLevel={50}
+                    skillLevel={60}
                     content="J'ai pu observer que je savais créer une synergie de compétences et de personnalités ..." 
                     buttonProps={[
                         {
                             buttonName: readMoreText,
-                            onClick: () => this.openSkillModal("synergie")
+                            onClick: () => this.openSkillModal("sql", "SQL")
                         }
                     ]}
                 />
@@ -85,7 +88,7 @@ export class TechnicalSkills extends React.Component {
                     buttonProps={[
                         {
                             buttonName: readMoreText,
-                            onClick: () => this.openSkillModal("synergie")
+                            onClick: () => this.openSkillModal("java", "Java")
                         }
                     ]}
                 />
@@ -93,35 +96,69 @@ export class TechnicalSkills extends React.Component {
         );
     }
 
-    openSkillModal(type) {
+    openSkillModal(type, name) {
+        const headerTitle = `Compétence technique : ${name}`
         switch(type) {
-            case "synergie":
+            case "javascript":
+                skillsActions.openJavascriptModal(this.props.openModal, type, headerTitle, this.renderProjectListButtons);
+                break;
+            case "git":
+                skillsActions.openGitModal(this.props.openModal, type, headerTitle, this.renderProjectListButtons);
                 this.props.openModal(
                     type,
+                    headerTitle,
+                );
+            break;
+            case "react":
+                skillsActions.openReactModal(this.props.openModal, type, headerTitle, this.renderProjectListButtons);
+                this.props.openModal(
+                    type,
+                    headerTitle,
+                );
+                this.props.openModal(
+                    type,
+                );
+            break;
+            case "csharp":
+                this.props.openModal(
+                    type,
+                    headerTitle,
                     <span>
-                        <h5>« Fédérer mon entourage afin d’aller vers un objectif commun »</h5>
-                        J’ai pu observer que je savais créer une synergie de compétences et de personnalités au sein d’un groupe de personnes dans lequel je peux me trouver.
-                        <br/>
-                        En effet, j’ai compris que j’avais une aisance à collaborer avec mes camarades de classe ou mes collègues grâce à mon caractère. Cela me permet de créer des échanges et de faciliter la mise en commun des tâches et des compétences. Je me suis découvert des aptitudes à fédérer mon entourage afin d’aller vers un objectif commun.
+                        <Article headline={name} content ={skillsTextsRender.renderTeamSpiritArticleContent()} renderButtonSkillsSecction={this.renderProjectListButtons}/>
                     </span>,
                     [{name: "It'School", link: "it-school"}]
                 );
-                break;
+            break;
+            case "java":
+                this.props.openModal(
+                    type,
+                    headerTitle,
+                    <span>
+                        <Article headline={name} content ={skillsTextsRender.renderTeamSpiritArticleContent()} renderButtonSkillsSecction={this.renderProjectListButtons}/>
+                    </span>,
+                    [{name: "It'School", link: "it-school"}]
+                );
+            break;
             default:
                 this.props.openModal(
                     "nope",
                     "Compétence",
                     "Compétence à venir."
-                );
+            );
         }
     }
 
-    renderProjectListButtons() {
-        return this.state.projectList.map(project => {
-            return <div data-component="modal-project-list">
-                    <h5>{this.state.projectList.length > 1 ? "Projets associés" : "Projet associé"}</h5>
-                    <Link to={`/my-achievements/${project.link}`}><Button raised color="accent">{project.name}</Button></Link>
-                </div>
-        })
+    renderProjectListButtons = () => {
+        return(
+            <div data-component="modal-skill-list">
+                <h5>{this.props.projectList.length > 1 ? "Projets associés" : "Projet associé"}</h5>
+                {
+                    this.props.projectList.map((project, idx) => {
+                        return <Link className="link-list" to={`/my-achievements/${project.link}`}><Button className={`list-button${this.props.projectList.length === 1 ? `-${idx}` : ""}`} variant="raised" color="secondary">{project.name}</Button></Link>
+                    })
+                }
+            </div>
+
+        );
     }
 }

@@ -139,7 +139,7 @@ export class TransversalSkills extends React.Component {
                     "nope",
                     "Compétence",
                     "Compétence à venir."
-                );
+            );
         }
     }
 

@@ -16,7 +16,8 @@ export class MySkillsView extends React.Component {
             isModalopen: false,
             modalContent: "Simple skill modal content.",
             modalTitle: "Modal title",
-            projectList: []
+            projectList: [],
+            currentPath: `/my-skills/${this.props.params.name}/`
         }
     }
 
@@ -24,8 +25,11 @@ export class MySkillsView extends React.Component {
         window.scrollTo(0, 0)
         const {name} = this.props.router.params
         switch(name) {
-            case "synergy":
-                this.openSkillModal("synergie");
+            case "javascript":
+                this.openSkillModal("javascript");
+                break;
+            case "git":
+                this.openSkillModal("git");
                 break;
             default:
                 break;
@@ -50,8 +54,6 @@ export class MySkillsView extends React.Component {
                     <DialogContent>
                         <DialogContentText>
                             {this.state.modalContent}
-                            <br/>
-                            {this.renderProjectListButtons()}
                         </DialogContentText>
                     </DialogContent>
                 </Dialog>
@@ -65,17 +67,18 @@ export class MySkillsView extends React.Component {
 
     skillsCardContent(path) {
         if (path === "technical") {
-            return <TechnicalSkills router={this.props.router} openModal={this.openSkillModal}/>
+            return <TechnicalSkills router={this.props.router} openModal={this.openSkillModal} projectList={this.state.projectList}/>
         } else if (path === "transversal") {
-            return <TransversalSkills router={this.props.router} openModal={this.openSkillModal}/>
+            return <TransversalSkills router={this.props.router} openModal={this.openSkillModal} projectList={this.state.projectList}/>
         }
 
         return <div>Nope</div>
     }
 
-    openSkillModal = (type, modalContent, projectList) => {
+    openSkillModal = (type, modalTitle, modalContent, projectList) => {
+        this.skillsNavigation(type)
         this.setState({
-            modalTitle: capitalize(type),
+            modalTitle,
             modalContent,
             projectList
         });
@@ -83,18 +86,11 @@ export class MySkillsView extends React.Component {
     }
 
     handleRequestClose = value => {
-        console.log("Hello");
         this.setState({ isModalopen: false });
+        this.skillsNavigation("all")
     };
-
-    renderProjectListButtons() {
-        return this.state.projectList.map(project => {
-            return(
-                <div data-component="modal-project-list">
-                    <h5>{this.state.projectList.length > 1 ? "Projets associés" : "Projet associé"}</h5>
-                    <Link to={`/my-achievements/${project.link}`}><Button raised color="accent">{project.name}</Button></Link>
-                </div>
-            );
-        });
+    
+    skillsNavigation(path) {
+        this.props.router.push(`${this.state.currentPath}${path}`);
     }
 }

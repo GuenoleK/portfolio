@@ -121,6 +121,25 @@ class SkillsTextsRender {
             </div>
         );
     }
+
+    renderJavascriptArticleContent() {
+        return(
+            <div className="javascript">
+            C’est un langage de programmation orienté objet. Il est aujourd’hui très à la mode et est très utilisé pour le développement web.<br/><br/>
+
+            J’ai eu une première approche au JavaScript lors de ma première année d’étude chez IN’TECH. C’est donc le premier langage que j’ai utilisé et cela m’a permis d’appréhender le développement logiciel.<br/>
+            Après cette expérience, je n’avais plus eu l’occasion de refaire du JavaScript jusqu’au moment où j’ai eu ma première expérience professionnelle dans le monde de l’informatique en rejoignant KLEE GROUP.<br/>
+            Là-bas, j’ai fait du JavaScript, à travers différents framework tels que ReactJS, pendant 2 ans et demi.<br/>
+            Cela m’a véritablement permis de savoir que j’aimais le développement frontend et que le javascript était un langage très malléable et évolutif permettant de faire beaucoup de choses et laissant donc beaucoup de place à la créativité du développeur.<br/>
+            Grâce au JavaScript, il était possible de créer des composants web, les faire changer d’état, créer des librairies ou même encore l’utiliser en tant que serveur avec NodeJS.<br/><br/>
+
+            J’ai primordialement connu le JavaScript avec sa forme la plus récente et avec les différents outils permettant de l’aborder de manière très structurée tel que TypeScript qui est une surcouche au-dessus du JavaScript permettant d’avoir un langage typé et plus structuré que ce que peut l’être le JS à la base. Cela ne change rien à la matière en elle-même car en cherchant un peu plus, nous pouvons remarquer que cette surcouche, par exemple, ne fait que modifier le prototype qui est à la base des objets JavaScript en leur donnant une forme de langage typé tel que le sont le C# ou encore le Java.<br/>
+            J’ai encore des choses à apprendre afin de l’utiliser de manière optimale, tel que connaître plus en profondeur les prototypes ou savoir quels sont les librairies qui donnent une qualité supérieure.<br/><br/>
+
+            J’ai beaucoup appris lors de mon expérience chez KLEE GROUP et je continue aujourd’hui d’utiliser ce langage, y compris dans mes projets personnels, afin de continuer à le connaître et à m’améliore dans la pratique.
+            </div>
+        );
+    }
 }
 
 export const skillsTextsRender = new SkillsTextsRender();
