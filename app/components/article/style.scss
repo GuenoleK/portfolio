@@ -31,10 +31,21 @@
     font-weight: bold !important;
   }
 
-  .link-list {
-    text-decoration: none;
-    .list-button {
-      margin-right: 5px;
+  [data-component="modal-skill-list"] {
+    width: 375px;
+
+    h5 {
+      font-weight: bold;
     }
+
+    .link-list {
+      text-decoration: none;
+      > button.list-button, button {
+        margin-right: 5px;
+        margin-bottom: 15px;
+        border-radius: 18px;
+      }
+    }
+
   }
 }

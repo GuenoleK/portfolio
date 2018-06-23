@@ -60,6 +60,50 @@ class SkillsActions {
             [{name: "It'School", link: "it-school"}]
         );
     }
+
+    openPerseveranceModal(openModal, type, name, renderProjectListButtons) {
+        openModal(
+            type,
+            `${this.technicalTitle}${name}`,
+            <span>
+                <Article headline="Persévérance" content={skillsTextsRender.renderPerseveranceArticleContent()} renderButtonSkillsSecction={renderProjectListButtons}/>
+            </span>,
+            [{name: "It'School", link: "it-school"}]
+        );
+    }
+
+    openCuriosityModal(openModal, type, name, renderProjectListButtons) {
+        openModal(
+            type,
+            `${this.technicalTitle}${name}`,
+            <span>
+                <Article headline="Curiosité" content={skillsTextsRender.renderCuriosityArticleContent()} renderButtonSkillsSecction={renderProjectListButtons}/>
+            </span>,
+            [{name: "It'School", link: "it-school"}, {name: "Focus", link: "focus"}, {name: "Portfolio", link: "portfolio"}, {name: "Prox'ITI", link: "prox-iti"}]
+        );
+    }
+
+    openCommunicationModal(openModal, type, name, renderProjectListButtons) {
+        openModal(
+            type,
+            `${this.technicalTitle}${name}`,
+            <span>
+                <Article headline="Vulgarisation du langage" content={skillsTextsRender.renderCommunicationArticleContent()} renderButtonSkillsSecction={renderProjectListButtons}/>
+            </span>,
+            [{name: "It'School", link: "it-school"}]
+        );
+    }
+
+    openTeamSpiritModal(openModal, type, name, renderProjectListButtons) {
+        openModal(
+            type,
+            `${this.technicalTitle}${name}`,
+            <span>
+                <Article headline="Esprit d'équipe" content={skillsTextsRender.renderTeamSpiritArticleContent()} renderButtonSkillsSecction={renderProjectListButtons}/>
+            </span>,
+            [{name: "It'School", link: "it-school"}, {name: "Focus", link: "focus"}, {name: "Prox'ITI", link: "prox-iti"}]
+        );
+    }
 }
 
 export const skillsActions = new SkillsActions();

@@ -8,6 +8,7 @@ import {Link} from "react-router";
 import {Article} from "../../components/article";
 import "./style.scss";
 import {skillsTextsRender} from "./skills-texts";
+import {skillsActions} from "./skills-actions";
 
 
 export class TransversalSkills extends React.Component {
@@ -21,28 +22,7 @@ export class TransversalSkills extends React.Component {
             projectList: []
         }
     }
-
-    componentWillMount() {
-        window.scrollTo(0, 0)
-        const {skill} = this.props.router.params
-        switch(skill) {
-            case "curiosity":
-            this.openSkillModal(skill);
-                break;
-            case "communication":
-            this.openSkillModal(skill);
-                break;
-            case "perseverance":
-            this.openSkillModal(skill);
-                break;
-            case "team-spirit":
-            this.openSkillModal(skill);
-                break;
-            default:
-                break;
-        }
-    }
-
+    
     render() {
         const readMoreText = "Lire plus";
         return(
@@ -54,7 +34,7 @@ export class TransversalSkills extends React.Component {
                     buttonProps={[
                         {
                             buttonName: readMoreText,
-                            onClick: () => this.openSkillModal("curiosity")
+                            onClick: () => this.openSkillModal("curiosity", "Curiosity")
                         }
                     ]}
                 />
@@ -76,7 +56,7 @@ export class TransversalSkills extends React.Component {
                     buttonProps={[
                         {
                             buttonName: readMoreText,
-                            onClick: () => this.openSkillModal("perseverance")
+                            onClick: () => this.openSkillModal("perseverance", "Persévérance")
                         }
                     ]}
                 />
@@ -94,45 +74,20 @@ export class TransversalSkills extends React.Component {
             </div>
         );
     }
-
     
-    openSkillModal(type) {
+    openSkillModal(type, name) {
         switch(type) {
             case "perseverance":
-                this.props.openModal(
-                    "Compétence transverce",
-                    <span>
-                        <Article headline="Persévérance" content={skillsTextsRender.renderPerseveranceArticleContent()} />
-                    </span>,
-                    [{name: "It'School", link: "it-school"}]
-                );
+                skillsActions.openPerseveranceModal(this.props.openModal, type, name, this.renderProjectListButtons);
                 break;
             case "curiosity":
-                this.props.openModal(
-                    "Compétence transverce",
-                    <span>
-                        <Article headline="Curiosité" content ={skillsTextsRender.renderCuriosityArticleContent()} />
-                    </span>,
-                    [{name: "It'School", link: "it-school"}]
-                );
+                skillsActions.openCuriosityModal(this.props.openModal, type, name, this.renderProjectListButtons);
             break;
             case "communication":
-                this.props.openModal(
-                    "Compétence transverce",
-                    <span>
-                        <Article headline="Vulgarisation du langage" content ={skillsTextsRender.renderCommunicationArticleContent()} />
-                    </span>,
-                    [{name: "It'School", link: "it-school"}]
-                );
+                skillsActions.openCommunicationModal(this.props.openModal, type, name, this.renderProjectListButtons);
             break;
             case "teamSpirit":
-                this.props.openModal(
-                    "Compétence transverce",
-                    <span>
-                        <Article headline="Esprit d'équipe" content ={skillsTextsRender.renderTeamSpiritArticleContent()} />
-                    </span>,
-                    [{name: "It'School", link: "it-school"}]
-                );
+                skillsActions.openTeamSpiritModal(this.props.openModal, type, name, this.renderProjectListButtons);
             break;
             default:
                 this.props.openModal(
@@ -143,12 +98,16 @@ export class TransversalSkills extends React.Component {
         }
     }
 
-    renderProjectListButtons() {
-        return this.state.projectList.map(project => {
-            return <div data-component="modal-project-list">
-                    <h5>{this.state.projectList.length > 1 ? "Projets associés" : "Projet associé"}</h5>
-                    <Link to={`/my-achievements/${project.link}`}><Button raised color="accent">{project.name}</Button></Link>
-                </div>
-        })
+    renderProjectListButtons = () => {
+        return(
+            <div data-component="modal-skill-list">
+                <h5>{this.props.projectList.length > 1 ? "Projets associés" : "Projet associé"}</h5>
+                {
+                    this.props.projectList.map((project, idx) => {
+                        return <Link className="link-list" to={`/my-achievements/${project.link}`}><Button className={`list-button${this.props.projectList.length === 1 ? `-${idx}` : ""}`} variant="raised" color="secondary">{project.name}</Button></Link>
+                    })
+                }
+            </div>
+        );
     }
 }

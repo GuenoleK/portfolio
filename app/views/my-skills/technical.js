@@ -121,7 +121,6 @@ export class TechnicalSkills extends React.Component {
                     })
                 }
             </div>
-
         );
     }
 }
