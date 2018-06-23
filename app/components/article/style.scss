@@ -5,9 +5,7 @@
   .article-content{
     font-size: 22px;
     padding-top: 25px;
-    padding: 25px 55px 0px 55px;
-
-    
+    padding: 25px 120px 0px 30px;
     
     ul > li {
       font-size: 21px;
@@ -17,7 +15,6 @@
     .achievements-cards {
       flex-flow: wrap;
       display: flex;
-      padding: 15px;
       justify-content: center;
 
       [data-component="-portfolio-card"] {

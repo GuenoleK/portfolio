@@ -24,30 +24,41 @@ class SkillsActions {
             <span>
                 <Article headline={name} content ={skillsTextsRender.renderGitArticleContent()} renderButtonSkillsSecction={renderProjectListButtons}/>
             </span>,
-            [{name: "It'School", link: "it-school"}]
+            [{name: "It'School", link: "it-school"}, {name: "Focus", link: "focus"}, {name: "Portfolio", link: "portfolio"}]
         )
     }
 
-    openGitModal(openModal, type, name, renderProjectListButtons) {
+    openReactModal(openModal, type, name, renderProjectListButtons) {
         openModal(
             type,
             `${this.technicalTitle}${name}`,
             <span>
-                <Article headline={name} content ={skillsTextsRender.renderGitArticleContent()} renderButtonSkillsSecction={renderProjectListButtons}/>
+                <Article headline={name} content ={skillsTextsRender.renderReactArticleContent()} renderButtonSkillsSecction={renderProjectListButtons} />
             </span>,
-            [{name: "It'School", link: "it-school"}]
-        )
+            [{name: "It'School", link: "it-school"}, {name: "Focus", link: "focus"}, {name: "Portfolio", link: "portfolio"}]
+        );
     }
 
-    openReactModal(openModal, type, name) {
+    openCSharpModal(openModal, type, name, renderProjectListButtons) {
         openModal(
             type,
-            `${technicalTitle}${name}`,
+            `${this.technicalTitle}${name}`,
             <span>
-                <Article headline="Vulgarisation du langage" content ={skillsTextsRender.renderCommunicationArticleContent()} renderButtonSkillsSecction={this.renderProjectListButtons} />
+                <Article headline={name} content ={skillsTextsRender.renderCSharpArticleContent()} renderButtonSkillsSecction={renderProjectListButtons}/>
             </span>,
             [{name: "It'School", link: "it-school"}]
-        )
+        );
+    }
+
+    openSqlModal(openModal, type, name, renderProjectListButtons) {
+        openModal(
+            type,
+            `${this.technicalTitle}${name}`,
+            <span>
+                <Article headline={name} content ={skillsTextsRender.renderSqlArticleContent()} renderButtonSkillsSecction={renderProjectListButtons}/>
+            </span>,
+            [{name: "It'School", link: "it-school"}]
+        );
     }
 }
 

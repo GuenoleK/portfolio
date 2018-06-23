@@ -29,7 +29,7 @@ export class TechnicalSkills extends React.Component {
                 <Card
                     title="JavaScript" 
                     skillLevel={75}
-                    content="J'ai pu observer que je savais créer une synergie de compétences et de personnalités ..." 
+                    content="C’est le premier langage que j’ai utilisé et cela m’a permis d’appréhender le développement logiciel ..." 
                     buttonProps={[
                         {
                             buttonName: readMoreText,
@@ -40,7 +40,7 @@ export class TechnicalSkills extends React.Component {
                 <Card 
                     title="Git" 
                     skillLevel={75}
-                    content="L'association Proxité agit au coeur des quartiers populaires en faveur de l'insertion scolaire et professionnelle des jeunes ..." 
+                    content="J’ai été amené à utiliser Git à travers divers projets techniques scolaires à IN’TECH mais aussi lors de mon alternance pendant 2 ans et demi. ..." 
                     buttonProps={[
                         {
                             buttonName: readMoreText,
@@ -51,7 +51,7 @@ export class TechnicalSkills extends React.Component {
                 <Card 
                     title="ReactJs" 
                     skillLevel={80}
-                    content="J'ai pu observer que je savais créer une synergie de compétences et de personnalités ..." 
+                    content="Durant mon stage et mon alternance, donc pendant 2 ans et demi, j’ai approfondi ma connaissance sur cette librairie ..." 
                     buttonProps={[
                         {
                             buttonName: readMoreText,
@@ -62,7 +62,7 @@ export class TechnicalSkills extends React.Component {
                 <Card 
                     title="C#" 
                     skillLevel={70}
-                    content="J'ai pu observer que je savais créer une synergie de compétences et de personnalités ..." 
+                    content="Le C# est le premier langage de programmation avec lequel j’ai appris le développement orienté objet ..." 
                     buttonProps={[
                         {
                             buttonName: readMoreText,
@@ -73,22 +73,11 @@ export class TechnicalSkills extends React.Component {
                 <Card 
                     title="SQL" 
                     skillLevel={60}
-                    content="J'ai pu observer que je savais créer une synergie de compétences et de personnalités ..." 
+                    content="Lors de mon alternance chez KLEE GROUP, j’ai pu réellement manipuler une base de données avec le langage SQL ..." 
                     buttonProps={[
                         {
                             buttonName: readMoreText,
                             onClick: () => this.openSkillModal("sql", "SQL")
-                        }
-                    ]}
-                />
-                <Card 
-                    title="Java" 
-                    skillLevel={40}
-                    content="J'ai pu observer que je savais créer une synergie de compétences et de personnalités ..." 
-                    buttonProps={[
-                        {
-                            buttonName: readMoreText,
-                            onClick: () => this.openSkillModal("java", "Java")
                         }
                     ]}
                 />
@@ -97,48 +86,22 @@ export class TechnicalSkills extends React.Component {
     }
 
     openSkillModal(type, name) {
-        const headerTitle = `Compétence technique : ${name}`
         switch(type) {
             case "javascript":
-                skillsActions.openJavascriptModal(this.props.openModal, type, headerTitle, this.renderProjectListButtons);
+                skillsActions.openJavascriptModal(this.props.openModal, type, name, this.renderProjectListButtons);
                 break;
             case "git":
-                skillsActions.openGitModal(this.props.openModal, type, headerTitle, this.renderProjectListButtons);
-                this.props.openModal(
-                    type,
-                    headerTitle,
-                );
-            break;
+                skillsActions.openGitModal(this.props.openModal, type, name, this.renderProjectListButtons);
+                break;
             case "react":
-                skillsActions.openReactModal(this.props.openModal, type, headerTitle, this.renderProjectListButtons);
-                this.props.openModal(
-                    type,
-                    headerTitle,
-                );
-                this.props.openModal(
-                    type,
-                );
-            break;
+                skillsActions.openReactModal(this.props.openModal, type, name, this.renderProjectListButtons);
+                break;
             case "csharp":
-                this.props.openModal(
-                    type,
-                    headerTitle,
-                    <span>
-                        <Article headline={name} content ={skillsTextsRender.renderTeamSpiritArticleContent()} renderButtonSkillsSecction={this.renderProjectListButtons}/>
-                    </span>,
-                    [{name: "It'School", link: "it-school"}]
-                );
-            break;
-            case "java":
-                this.props.openModal(
-                    type,
-                    headerTitle,
-                    <span>
-                        <Article headline={name} content ={skillsTextsRender.renderTeamSpiritArticleContent()} renderButtonSkillsSecction={this.renderProjectListButtons}/>
-                    </span>,
-                    [{name: "It'School", link: "it-school"}]
-                );
-            break;
+                skillsActions.openCSharpModal(this.props.openModal, type, name, this.renderProjectListButtons);
+                break;
+            case "sql":
+                skillsActions.openSqlModal(this.props.openModal, type, name, this.renderProjectListButtons);
+                break;
             default:
                 this.props.openModal(
                     "nope",

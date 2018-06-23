@@ -125,18 +125,86 @@ class SkillsTextsRender {
     renderJavascriptArticleContent() {
         return(
             <div className="javascript">
-            C’est un langage de programmation orienté objet. Il est aujourd’hui très à la mode et est très utilisé pour le développement web.<br/><br/>
+                C’est un langage de programmation orienté objet. Il est aujourd’hui très à la mode et est très utilisé pour le développement web.<br/><br/>
 
-            J’ai eu une première approche au JavaScript lors de ma première année d’étude chez IN’TECH. C’est donc le premier langage que j’ai utilisé et cela m’a permis d’appréhender le développement logiciel.<br/>
-            Après cette expérience, je n’avais plus eu l’occasion de refaire du JavaScript jusqu’au moment où j’ai eu ma première expérience professionnelle dans le monde de l’informatique en rejoignant KLEE GROUP.<br/>
-            Là-bas, j’ai fait du JavaScript, à travers différents framework tels que ReactJS, pendant 2 ans et demi.<br/>
-            Cela m’a véritablement permis de savoir que j’aimais le développement frontend et que le javascript était un langage très malléable et évolutif permettant de faire beaucoup de choses et laissant donc beaucoup de place à la créativité du développeur.<br/>
-            Grâce au JavaScript, il était possible de créer des composants web, les faire changer d’état, créer des librairies ou même encore l’utiliser en tant que serveur avec NodeJS.<br/><br/>
+                J’ai eu une première approche au JavaScript lors de ma première année d’étude chez IN’TECH. C’est donc le premier langage que j’ai utilisé et cela m’a permis d’appréhender le développement logiciel.<br/>
+                Après cette expérience, je n’avais plus eu l’occasion de refaire du JavaScript jusqu’au moment où j’ai eu ma première expérience professionnelle dans le monde de l’informatique en rejoignant KLEE GROUP.<br/>
+                Là-bas, j’ai fait du JavaScript, à travers différents framework tels que ReactJS, pendant 2 ans et demi.<br/>
+                Cela m’a véritablement permis de savoir que j’aimais le développement frontend et que le javascript était un langage très malléable et évolutif permettant de faire beaucoup de choses et laissant donc beaucoup de place à la créativité du développeur.<br/>
+                Grâce au JavaScript, il était possible de créer des composants web, les faire changer d’état, créer des librairies ou même encore l’utiliser en tant que serveur avec NodeJS.<br/><br/>
 
-            J’ai primordialement connu le JavaScript avec sa forme la plus récente et avec les différents outils permettant de l’aborder de manière très structurée tel que TypeScript qui est une surcouche au-dessus du JavaScript permettant d’avoir un langage typé et plus structuré que ce que peut l’être le JS à la base. Cela ne change rien à la matière en elle-même car en cherchant un peu plus, nous pouvons remarquer que cette surcouche, par exemple, ne fait que modifier le prototype qui est à la base des objets JavaScript en leur donnant une forme de langage typé tel que le sont le C# ou encore le Java.<br/>
-            J’ai encore des choses à apprendre afin de l’utiliser de manière optimale, tel que connaître plus en profondeur les prototypes ou savoir quels sont les librairies qui donnent une qualité supérieure.<br/><br/>
+                J’ai primordialement connu le JavaScript avec sa forme la plus récente et avec les différents outils permettant de l’aborder de manière très structurée tel que TypeScript qui est une surcouche au-dessus du JavaScript permettant d’avoir un langage typé et plus structuré que ce que peut l’être le JS à la base. Cela ne change rien à la matière en elle-même car en cherchant un peu plus, nous pouvons remarquer que cette surcouche, par exemple, ne fait que modifier le prototype qui est à la base des objets JavaScript en leur donnant une forme de langage typé tel que le sont le C# ou encore le Java.<br/>
+                J’ai encore des choses à apprendre afin de l’utiliser de manière optimale, tel que connaître plus en profondeur les prototypes ou savoir quels sont les librairies qui donnent une qualité supérieure.<br/><br/>
 
-            J’ai beaucoup appris lors de mon expérience chez KLEE GROUP et je continue aujourd’hui d’utiliser ce langage, y compris dans mes projets personnels, afin de continuer à le connaître et à m’améliore dans la pratique.
+                J’ai beaucoup appris lors de mon expérience chez KLEE GROUP et je continue aujourd’hui d’utiliser ce langage, y compris dans mes projets personnels, afin de continuer à le connaître et à m’améliore dans la pratique.
+            </div>
+        );
+    }
+
+    renderGitArticleContent() {
+        return(
+            <div className="git">
+                C’est un outil permettant de gérer la version des projets qui l’intègrent.<br/>
+                Cela permet donc de sauvegarder un historique des modifications qui ont été effectuées lors du développement du projet. Cela est un outil que j’estime indispensable, que ce soit pour un projet personnel ou professionnel, que cela soit un travail en solo ou en groupe.<br/><br/>
+
+                J’ai personnellement pu utiliser git à travers différents environnements qui ne sont, pour moi, plus très mystérieux.<br/>
+                Afin de pouvoir, localement, l’utiliser, je suis capable d’exécuter des commandes git en console mais j’ai aussi déjà utilisé des logiciels tels que Github for Windows ou encore GitExtensions qui sont des interfaces graphiques permettant d’avoir un œil sur les branches et permettant d’exécuter des commandes Git.<br/>
+                J’ai aussi pu utiliser des sites collaboratifs tels que GitHub (que j’utilise très souvent) et Gitlab (que j’ai eu l’occasion de découvrir lors de mon alternance chez KLEE GROUP).<br/>
+                Cela permet d’avoir un site servant de serveur et qui recueil tout le code source utilisé pour un projet.<br/><br/>
+
+                J’ai été amené à utiliser Git à travers divers projets techniques scolaires à IN’TECH mais aussi lors de mon alternance pendant 2 ans et demi.<br/>
+                Je ne connais actuellement pas toutes les subtilités de cet outil, car il permet de faire des choses très puissantes. Cependant, je suis aujourd’hui très facilement capable de l’utiliser que ce soit pour mettre à disposition mon travail, récupérer du travail depuis le serveur ou encore intégrer le travail des autres.<br/>
+                Il y a un workflow que j’aime beaucoup, surtout pour un projet fait en groupe, ce le Feature Branch Workflow, qui est le fait d’ouvrir une branche par fonctionnalité développée. Une fois la fonctionnalité terminée, une relecture est soumise à travers une pull request/merge request qui permet à un développeur autre que celui qui a développé la fonctionnalité de regarder la qualité du code puis de valider ou non afin de l’intégrer à la branche principale contenant l’ensemble des features développées.<br/><br/>
+
+                Git est pour moi aujourd’hui indispensable et sera utilisé dans l’ensemble des projets futurs que j’aurai à faire que ce soit de manière personnelle ou professionnelle.
+            </div>
+        );
+    }
+
+    renderReactArticleContent() {
+        return(
+            <div className="react">
+               C’est une librairie JavaScript développée par Facebook qui a été crée afin de faciliter la création de Single Page Applications (SPA).<br/><br/>
+
+                J’ai eu l’occasion de prendre en main cette librairie durant toute ma 3e année à IN’TECH. Je l’ai utilisé pour les besoins du projet IT’SCHOOL où j’ai appris à la découvrir.<br/>
+                Durant mon stage et mon alternance chez KLEE GROUP, donc pendant 2 ans et demi, j’ai approfondi ma connaissance sur cette librairie. Ayant plus de temps d’apprentissage et de pratique, car j’en faisais à temps plein, j’ai bien pu comprendre le fonctionne de cette librairie qui me permettait alors de créer des composant web mais aussi des pages web dynamiques.<br/><br/>
+
+                J’ai pu de tester d’autres librairies de rendu telles que VueJS ou encore AngularJS. J’ai globalement trouvé que l’apprentissage de ReactJS était moins coûteux, donc très rapide à prendre en main.<br/>
+                J’estime aujourd’hui qu’il n’y a pas Une solution pour le développement des SPA, cependant j’aime beaucoup l’approche qu’a ReactJS.<br/><br/>
+
+                Pour mes futurs projets, j’aimerais continuer à utiliser ReactJS, ou des librairies équivalentes. VueJS est aussi très intéressant et rafraîchissant dans son approche. L’avantage de ReactJS est que Facebook s’en occupe beaucoup et a aussi créé une librairie (ReactNative) qui permet de développer tel que cela est le cas avec ReactJS mais permettant de créer des applications mobiles.<br/>
+            </div>
+        );
+    }
+
+    renderCSharpArticleContent() {
+        return(
+            <div className="csharp">
+               Le C# est le premier langage de programmation avec lequel j’ai appris le développement orienté objet.<br/><br/>
+
+                J’ai fait sa découverte dès ma 2e année d’étude à IN’TECH et l’ai utilisé durant 2 ans dans mes projets scolaires.<br/>
+                Avec ce langage de programmation j’ai pu créer 2 applications. Une application lourde créer avec du Windows Form et une application web, donc pour laquelle le C# servait pour le backend.<br/>
+                Ajouté à cela, j’ai pu appréhender pour la première fois un ORM en utilisant EntityFramework.<br/>
+                L’application qui a pu bénéficier de toute cette expérience est l’application web IT’SCHOOL.<br/>
+                Ses objets en base de données étaient gérés avec EntityFramework. Le backend et le serveur ont, eux, été complètement développé en C# avec ASP.Net pour faire le lien entre le front et le back.<br/><br/>
+
+                C’est un langage de programmation que j’ai aimé du fait de sa maturité et de son évolutivité. Microsoft en prend soin et l’a même, depuis peu, mis en open source afin d’y ajouter des fonctionnalités très intéressantes.<br/>
+                J’aimerais continuer à découvrir ce langage passionnant et intéressant dans un futur proche pour des projets que je pourrai faire.
+            </div>
+        );
+    }
+
+    renderSqlArticleContent() {
+        return(
+            <div className="sql">
+               Le Structured Query Language est un langage permettant la manipulation de données dans des bases de données relationnelles.<br/><br/>
+
+                Durant mon expérience dans le secteur du développement informatique, j’ai pu utiliser ses parties définition et manipulation de données.<br/>
+                Lors de mon alternance chez KLEE GROUP, j’ai pu réellement manipuler une base de données avec le langage SQL. L’outil que j’utilisais était PostgreSQL.<br/>
+                Je n’ai pas souvent eu l’occasion de créer des requêtes SQL durant ma scolarité, alors il est vrai qu’au début cela a été très difficile pour moi de m’y faire.<br/>
+                Aujourd’hui, je commence à m’habituer à ce langage et je compte continuer de le découvrir et de l’utiliser. Je comprends dorénavant son importance car il joue un rôle essentiel dans un grand nombre d’application de gestion et cela est important pour moi de pouvoir être à l’aise avec ce langage.<br/><br/>
+
+                A l’avenir je compte donc bien être sur des projets ou bien faire des projets qui me permettront de continuer à m’améliorer dans la compréhension de ce langage.
             </div>
         );
     }
