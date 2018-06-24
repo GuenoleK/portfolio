@@ -6,6 +6,7 @@ import "./style.scss";
 import {Article} from "../../components/article";
 import {AppBar, Collapse, Button, Dialog, DialogTitle, DialogContent, DialogContentText, Toolbar, Typography, IconButton, Slide} from 'material-ui'
 import {achievementsTextsRender} from "./achievements-texts"
+import { Parallax } from 'react-parallax';
 
 export class MyAchievementsView extends PureComponent {
 
@@ -44,7 +45,18 @@ export class MyAchievementsView extends PureComponent {
     render() {
         return(
             <div data-component="my-achievements">
-                <Article headline="Mes réalisations" content={this.achivementCardContent()} />
+                <Parallax className="home-intro" bgImage={require('../../assets/preview.gif')} strength={400}>
+                    <Card 
+                        content={
+                            <span>
+                                Mes réalisations
+                            </span>
+                        }
+                        type="home"
+                    />
+                    <div className="fullscreen-header__pointer material-icons">expand_more</div>
+                </Parallax>
+                <Article headline={undefined} content={this.achivementCardContent()} />
                 <Dialog className="skills-dialog" onClose={this.handleRequestClose} open={this.state.isModalopen} transition={Collapse} TransitionComponent={this.Transition} fullScreen>
                     <AppBar className="appbar">
                         <Toolbar className="toolbar">

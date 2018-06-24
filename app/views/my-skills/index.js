@@ -8,6 +8,7 @@ import {TransversalSkills} from "./transversal";
 import {Slide, AppBar, Toolbar, IconButton, Typography, Button, Collapse, Dialog, DialogTitle, DialogContent, DialogContentText} from "material-ui";
 import {skillsActions} from "./skills-actions";
 import "./style.scss";
+import { Parallax } from 'react-parallax';
 
 export class MySkillsView extends React.Component {
 
@@ -66,7 +67,18 @@ export class MySkillsView extends React.Component {
         const headline = this.props.params.name === "technical" ? "Compétences techniques" : this.props.params.name === "transversal" ? "Compétences transverses" : "Mes compétences";
         return(
             <div data-component="my-skills">
-                <Article headline={headline} content={this.skillsCardContent(this.props.params.name)} />
+                <Parallax className="home-intro" bgImage={require('../../assets/preview.png')} strength={400}>
+                    <Card 
+                        content={
+                            <span>
+                                {headline}
+                            </span>
+                        }
+                        type="home"
+                    />
+                    <div className="fullscreen-header__pointer material-icons">expand_more</div>
+                </Parallax>
+                <Article headline={undefined} content={this.skillsCardContent(this.props.params.name)} />
                 <Dialog className="skills-dialog" onClose={this.handleRequestClose} open={this.state.isModalopen} transition={Collapse} TransitionComponent={this.Transition} fullScreen>
                     <AppBar className="appbar">
                         <Toolbar className="toolbar">

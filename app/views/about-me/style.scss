@@ -31,28 +31,28 @@
             cursor: default;
             user-select: none;
         }
-    }
 
-    .react-parallax-content {
-        position: relative;
-        height: inherit;
-        width: inherit;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        .react-parallax-content {
+            position: relative;
+            height: inherit;
+            width: inherit;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
 
-        [data-component="quote-card"] {
-            width: 500px !important;
-        
-            .mdl-card__actions {
-                display: flex;
-                align-items: center;
-            }
-        
-            [data-component="quote-bottom"] {
-                display: none;
-                justify-content: flex-end;
+            [data-component="quote-card"] {
+                width: 500px !important;
+            
+                .mdl-card__actions {
+                    display: flex;
+                    align-items: center;
+                }
+            
+                [data-component="quote-bottom"] {
+                    display: none;
+                    justify-content: flex-end;
+                }
             }
         }
     }

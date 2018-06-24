@@ -10,6 +10,8 @@ import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timel
 import 'react-vertical-timeline-component/style.min.css';
 import {careerEventsTexts} from "./career-events";
 import {momentUtil} from "../../utils/moment";
+import { Parallax } from 'react-parallax';
+import {Card} from "../../components/cards";
 
 export class MyCareerView extends PureComponent {
 
@@ -22,7 +24,18 @@ export class MyCareerView extends PureComponent {
     render() {
         return(
             <div data-component="my-career">
-                <Article headline="Mon expérience" content={this.articleContent()} />
+                <Parallax className="home-intro" bgImage={require('../../assets/preview (1).png')} strength={400}>
+                    <Card 
+                        content={
+                            <span>
+                                Mon expérience
+                            </span>
+                        }
+                        type="home"
+                    />
+                    <div className="fullscreen-header__pointer material-icons">expand_more</div>
+                </Parallax>
+                <Article headline={undefined} content={this.articleContent()} />
             </div>
         );
     }

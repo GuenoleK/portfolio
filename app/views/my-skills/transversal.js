@@ -41,7 +41,7 @@ export class TransversalSkills extends React.Component {
                 <Card
                     title="Vulgarisation du langage" 
                     skillLevel={75}
-                    content="C’est la capacité de faire comprendre des notions a un public qui n’est pas amené à connaître le langage utilisé dans mon domaine d’expertise ..." 
+                    content="C’est faire comprendre des notions a un public qui n’est pas amené à connaître le langage utilisé dans mon domaine d’expertise ..." 
                     buttonProps={[
                         {
                             buttonName: readMoreText,
@@ -63,7 +63,7 @@ export class TransversalSkills extends React.Component {
                 <Card 
                     title="Esprit d'équipe" 
                     skillLevel={75}
-                    content="Travailler en équipe, participer activement pour un objectif commun, collaborer avec les autres et privilégier la réussite du groupe. C’est cela pour moi l’esprit d’équipe ..." 
+                    content="Travailler en équipe, participer activement pour un objectif commun, collaborer ..." 
                     buttonProps={[
                         {
                             buttonName: readMoreText,

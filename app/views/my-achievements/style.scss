@@ -1,6 +1,56 @@
 [data-component="my-achievements"] {
     display: flex;
     flex-flow: wrap row;
+    width: 100%;
+
+    .home-intro {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 81vh;
+        width: inherit;
+
+        .fullscreen-header__pointer {
+            animation-name: point-down;
+            animation-duration: 1.3s;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: both;
+            animation-iteration-count: infinite;
+            -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+            position: absolute;
+            bottom: 80px;
+            left: 50%;
+            color: white;
+            font-size: 55px;
+            cursor: default;
+            user-select: none;
+        }
+
+        .react-parallax-content {
+            position: relative;
+            height: inherit;
+            width: inherit;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            [data-component="quote-card"] {
+                width: 500px !important;
+            
+                .mdl-card__actions {
+                    display: flex;
+                    align-items: center;
+                }
+            
+                [data-component="quote-bottom"] {
+                    display: none;
+                    justify-content: flex-end;
+                }
+            }
+        }
+    }
 
     > h3 {
         flex: 0 1 100%;

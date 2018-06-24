@@ -7,7 +7,10 @@ export class Article extends React.Component {
         const {headline, content, renderButtonSkillsSecction} = this.props
         return (
             <div data-component="article">
-                <h2 className="article-headline">{headline}</h2>
+                {
+                    headline && 
+                    <h2 className="article-headline">{headline}</h2>
+                }
                 <div className="article-content">
                     {content}
                     {
@@ -24,6 +27,5 @@ export class Article extends React.Component {
 }
 
 Article.defaultProps = {
-    headline: "This is a headline",
     content: () => <div>Content here</div>
 }
