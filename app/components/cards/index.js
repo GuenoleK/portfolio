@@ -85,9 +85,12 @@ export class Card extends PureComponent {
                        {this.props.content}
                     </h4>
                 </div>
-                 <div data-component="card-bottom" className="mdl-card__actions mdl-card--border">
-                     {this.renderButtons()}
-                </div>
+                {
+                    this.props.buttonProps && 
+                    <div data-component="card-bottom" className="mdl-card__actions mdl-card--border">
+                        {this.renderButtons()}
+                    </div>
+                }
             </div>
         )
     }

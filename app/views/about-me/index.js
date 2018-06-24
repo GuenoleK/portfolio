@@ -1,12 +1,29 @@
 import React, {PureComponent} from 'react';
 import "./style.scss";
 import {Article} from "../../components/article";
+import { Parallax } from 'react-parallax';
+import {Card} from "../../components/cards";
 
 export class AboutMeView extends PureComponent {
+
+    componentDidMount() {
+        scrollTo(0,0);
+    }
 
     render() {
         return(
             <div data-component="about-me">
+                <Parallax className="home-intro" bgImage={require('../../assets/style_imagery_bestpractices_narrative1.png')} strength={400}>
+                    <Card 
+                        content={
+                            <span>
+                                Qui suis-je ?
+                            </span>
+                        }
+                        type="home"
+                    />
+                    <div className="fullscreen-header__pointer material-icons">expand_more</div>
+                </Parallax>
                 <Article headline="Ma passion, mon métier, ma vie" content={this.articleContent()} />
             </div>
         );
