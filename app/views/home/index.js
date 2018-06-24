@@ -13,7 +13,7 @@ export class HomeView extends PureComponent {
     render() {
         return(
             <div data-component="home-container">
-                <Parallax className="home-intro" bgImage={require('../../assets/intro5.jpg')} strength={100}>
+                <Parallax className="home-intro" bgImage={require('../../assets/guenole_flat.jpg')} strength={100}>
                     <div data-component="quote-card" className="demo-card-event mdl-card mdl-shadow--2dp">
                         <div className="mdl-card__title mdl-card--expand">
                             <h4>
@@ -52,7 +52,7 @@ export class HomeView extends PureComponent {
                     <Card 
                         content={
                             <span>
-                                Découvrez les compétences que j'ai pu acquérir au fil des mes expériences
+                                Découvrez mes compétences acquises au fil des mes expériences
                             </span>}
                         buttonProps={[
                             {
