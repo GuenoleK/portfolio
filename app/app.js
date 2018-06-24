@@ -6,6 +6,7 @@ import routes from './routes';
 import Main from './main'; // Our custom react component
 import './style';
 import 'material-design-lite/dist/material';
+import moment from "moment";
 
 // Translation part
 import translation from 'i18next';

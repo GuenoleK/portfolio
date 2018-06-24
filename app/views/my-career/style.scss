@@ -6,4 +6,17 @@
         flex: 0 1 100%;
         padding-left: 20px;
     }
+
+    [data-component="article"] {
+        padding: 0;
+        width: 100%;
+
+        .article-headline {
+            padding: 0 155px;
+        }
+
+        .event-text {
+            font-size: 18px;
+        }
+    }
 }
