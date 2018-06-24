@@ -23,11 +23,9 @@ export class MyCareerView extends PureComponent {
         return(
             <div data-component="my-career">
                 <Article headline="Mon expérience" content={this.articleContent()} />
-                {/* <ComingSoon title="Mon expérience" description="La page dans laquelle je fais le récit de l'ensemble de mes expériences informatiques est actuellement en cours de construction." /> */}
             </div>
         );
     }
-
 
     articleContent() {
         return(
