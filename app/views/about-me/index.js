@@ -8,7 +8,6 @@ export class AboutMeView extends PureComponent {
         return(
             <div data-component="about-me">
                 <Article headline="Ma passion, mon métier, ma vie" content={this.articleContent()} />
-                {/* <ComingSoon title="Qui suis-je ?" description="La page dans laquelle je décris mes traits de personnalité, centres d'intérêts et ambitions est en cours de construction." /> */}
             </div>
         );
     }

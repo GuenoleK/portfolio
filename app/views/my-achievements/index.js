@@ -208,7 +208,7 @@ export class MyAchievementsView extends PureComponent {
     renderSkillListButtons = () => {
         return(
             <div data-component="modal-skill-list">
-                <h5>{this.state.skillList.length > 1 ? "Compétence associés" : "Compétence associé"}</h5>
+                <h5>{this.state.skillList.length > 1 ? "Compétences associés" : "Compétence associé"}</h5>
                 {
                     this.state.skillList.map((skill, idx) => {
                         return <Link className="link-list" to={`/my-skills/${skill.link}`}><Button className={`list-button${this.state.skillList.length === 1 ? `-${idx}` : ""}`} variant="raised" color="secondary">{skill.name}</Button></Link>

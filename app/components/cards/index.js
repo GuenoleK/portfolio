@@ -45,11 +45,12 @@ export class Card extends PureComponent {
     };
 
     renderButtons() {
-        return this.props.buttonProps.map(({buttonName, link, onClick}) => {
+
+        return this.props.buttonProps ? this.props.buttonProps.map(({buttonName, link, onClick}) => {
             const cardButton = <Button color="primary" onClick={onClick}>{buttonName}</Button>
             const linkCardButton = <Button raised color="primary" onClick={onClick}>{buttonName}</Button>
             return link ?  <Link to={link}>{linkCardButton}</Link> : cardButton;
-        })
+        }) : undefined;
     }
 
 

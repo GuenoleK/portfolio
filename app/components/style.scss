@@ -1,10 +1,16 @@
 @import "../style/variables.scss";
 
+[data-component="layout"].layout-about-me {
+    // background-image: url("../assets/style_imagery_bestpractices_narrative1.png");
+    // background-repeat: no-repeat;
+    // background-size: 100%;
+}
+
 [data-component="layout"] {
     display: flex;
     flex-direction: column;
     min-height: 100%;
-    background: antiquewhite;
+    background: #e3ddd9;
 
     [data-component="header"] {
         background-color: $primary;

@@ -76,11 +76,19 @@ export class Layout extends PureComponent {
         return pathArrayString.find(param => param === location);
     }
 
+    getLocation() {
+        const pathArrayString = this.props.router.location.pathname.split("/");
+        if(pathArrayString.length > 1) {
+            return pathArrayString[1];
+        }
+        return "home;"
+    }
+
     render() {
         const {anchorEl} = this.state;
 
         return(
-            <div data-component="layout" id="layout">
+            <div data-component="layout" id="layout" className={`layout-${this.getLocation()}`}>
                 <div data-component="header" id="header-layout" className={`${this.state.headerClassName}`}>
                     <div data-component="header-content">
                         <div data-component="header-left-content">
