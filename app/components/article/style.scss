@@ -1,3 +1,5 @@
+@import '../../style/variables.scss';
+
 [data-component="article"] {
   padding: 0 155px;
   line-height: 28px;
@@ -24,6 +26,13 @@
           width: 400px;
       }
     }
+  }
+  h3 {
+    color: $primary;
+  }
+
+  h4 {
+    color: $secondary-text;
   }
 }
 

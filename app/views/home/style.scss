@@ -45,6 +45,32 @@
             cursor: default;
             user-select: none;
         }
+
+        
+
+        [data-component="quote-card"] {
+
+            > .mdl-card__title.mdl-card--expand {
+                display: flex;
+                align-items: flex-start;
+
+                h2 {
+                    margin-bottom: 0px;
+                }
+
+                h3, h4 {
+                    margin-left: 5px;
+                }
+    
+                h3 {
+                    margin-top: 0px;
+                }
+    
+                h4.role {
+                    text-align: start;
+                }
+            }
+        }
     }
 
     @keyframes point-down {

@@ -13,20 +13,12 @@ export class HomeView extends PureComponent {
     render() {
         return(
             <div data-component="home-container">
-                <Parallax className="home-intro" bgImage={require('../../assets/guenole_flat.jpg')} strength={100}>
+                <Parallax className="home-intro" bgImage={require('../../assets/guenole_flat.jpg')} strength={250}>
                     <div data-component="quote-card" className="demo-card-event mdl-card mdl-shadow--2dp">
                         <div className="mdl-card__title mdl-card--expand">
-                            <h4>
-                                "Success is not the key to happiness. 
-                                Happiness is the key to success. If you love what you are doing, you will be successful." 
-                                <br/>
-                                 - Albert Shweitzer
-                            </h4>
-                        </div>
-                        <div data-component="quote-bottom" className="mdl-card__actions mdl-card--border">
-                            <a className="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                            Add to Calendar <i className="material-icons">event</i>
-                            </a>
+                            <h2>Guénolé Kikabou,</h2>
+                            <h3>27 ans</h3>
+                            <h4 className="role">Ingénieur informatique spécialisé en ingénierie du logiciel</h4>
                         </div>
                     </div>
                     <div className="fullscreen-header__pointer material-icons">expand_more</div>
@@ -35,8 +27,7 @@ export class HomeView extends PureComponent {
                     <Card 
                         content={
                             <span>
-                                L'être humain est important, selon moi, et cela même pour le métier de l'informatique.<br/><br/>
-                                Dans une ère où l'évolution technologique prime, j'aime participer à l'amélioration du quotidien grâce à mon métier.
+                                Développeur font-end javascript, je suis passionné par le partage et les valeurs humaines au sein d’une entreprise.
                             </span>
                         }
                         buttonProps={[
