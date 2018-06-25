@@ -1,14 +1,12 @@
 import React, {PureComponent} from 'react';
 import "./style.scss";
-import {ComingSoon} from "../../components/coming-soon";
 import {Article} from "../../components/article";
-import { Avatar, Icon } from '@material-ui/core';
 import WorkIcon from '@material-ui/icons/Work';
 import SchoolIcon from '@material-ui/icons/School';
 import EventSeatIcon from '@material-ui/icons/EventSeat';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import {careerEventsTexts} from "./career-events";
+import {careerEventsTexts} from "./career-texts";
 import {momentUtil} from "../../utils/moment";
 import { Parallax } from 'react-parallax';
 import {Card} from "../../components/cards";

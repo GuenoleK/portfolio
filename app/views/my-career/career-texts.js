@@ -6,13 +6,11 @@ class CareerEventsTexts {
     return(
       <div className="klee-alternance">
           <h3 className="vertical-timeline-element-title">Développeur Full-Stack</h3>
-          <h4 className="vertical-timeline-element-subtitle">KLEE GROUP (Mode projet)</h4><br/>
+          <h4 className="vertical-timeline-element-subtitle">KLEE GROUP (Projet client SoftBank Robotics)</h4><br/>
 
           <div className="event-text">
-            Développeur sur un projet passionnant utilisant les langages Javascript pour le front-end et Java accompagné du SQL (avec Postegresql) pour le back-end.<br/><br/>
-
-            Liste des langages, frameworks et librairies utilisées : <br/>
-            Javascript (EcmaScript 6+), Java, SQL (Postegresl), HTML5, CSS3, ReactJS, Mobx, WebPack, Material Design, babel etc.
+            Développement d’une plateforme de services, pour le client SoftBank Robotics, permettant de gérer l’ensemble des flottes de robots Pepper et NAO à travers le monde, dans une démarche agile et centrée utilisateur.<br/><br/>
+            Les technologies utilisées sont Javascript (EcmaScript 6+), Java, SQL (PostgreSQL), Elastic Search, HTML5, CSS3, ReactJS et Mobx
           </div>
       </div>
     );
@@ -22,11 +20,11 @@ class CareerEventsTexts {
     return(
       <div className="klee-alternance">
           <h3 className="vertical-timeline-element-title">Développeur Front-End</h3>
-          <h4 className="vertical-timeline-element-subtitle">KLEE GROUP (Focus)</h4><br/>
+          <h4 className="vertical-timeline-element-subtitle">KLEE GROUP (Equipe Focus)</h4><br/>
 
           <div className="event-text">
-            Membre de l'équipe "Focus" pour un stage de 6 mois, celle-ci se charge de la création d'IHM et met à disposition ses templates, composants et extensions au tout public.<br/><br/>
-            Les langages et frameworks utilisés sont le Javascript (EcmaScript 6+), HTML5, CSS3, ReactJS, Redux, WebPack, Material Design, babel etc.
+          Membre de l'équipe "Focus" pour un stage de 6 mois, celle-ci est responsable de la recherche et du développement d'une méthodologie UX et d'un framework industrialisé Javascript offrant des IHM et ergonomies optimisées au sein de templates, composants et plugins, destinés à la communauté open source.<br/><br/>
+            Les langages et frameworks utilisés sont le Javascript (EcmaScript 6+), HTML5, CSS3, ReactJS, Redux, WebPack, Material Design, babel etc..
           </div>
       </div>
     );
