@@ -5,7 +5,7 @@ class CareerEventsTexts {
   renderKleeTwoContent() {
     return(
       <div className="klee-alternance">
-          <h3 className="vertical-timeline-element-title">Développeur frontend/backend</h3>
+          <h3 className="vertical-timeline-element-title">Développeur Full-Stack</h3>
           <h4 className="vertical-timeline-element-subtitle">KLEE GROUP (Mode projet)</h4><br/>
 
           <div className="event-text">
@@ -21,8 +21,8 @@ class CareerEventsTexts {
   renderKleeOneContent() {
     return(
       <div className="klee-alternance">
-          <h3 className="vertical-timeline-element-title">Développeur frontend</h3>
-          <h4 className="vertical-timeline-element-subtitle">KLEE GROUPE (Focus)</h4><br/>
+          <h3 className="vertical-timeline-element-title">Développeur Front-End</h3>
+          <h4 className="vertical-timeline-element-subtitle">KLEE GROUP (Focus)</h4><br/>
 
           <div className="event-text">
             Membre de l'équipe "Focus" pour un stage de 6 mois, celle-ci se charge de la création d'IHM et met à disposition ses templates, composants et extensions au tout public.<br/><br/>
