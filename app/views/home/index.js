@@ -1,10 +1,12 @@
 import React, {PureComponent} from 'react';
 import "./style.scss";
 import { Parallax } from 'react-parallax';
-import {Link} from 'react-router';
 import {Card} from "../../components/cards/index";
+import {momentUtil} from "../../utils/moment";
 
 export class HomeView extends PureComponent {
+
+    date = momentUtil.date();
 
     componentDidMount() {
         window.scrollTo(0, 0)
@@ -17,7 +19,7 @@ export class HomeView extends PureComponent {
                     <div data-component="quote-card" className="demo-card-event mdl-card mdl-shadow--2dp">
                         <div className="mdl-card__title mdl-card--expand">
                             <h2>Guénolé Kikabou,</h2>
-                            <h3>27 ans</h3>
+                            <h3>{this.date([1991, 2, 22]).fromNow(true)}</h3>
                             <h4 className="role">Ingénieur informatique spécialisé en ingénierie du logiciel</h4>
                         </div>
                     </div>
