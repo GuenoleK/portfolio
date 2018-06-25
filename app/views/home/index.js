@@ -29,7 +29,7 @@ export class HomeView extends PureComponent {
                     <Card 
                         content={
                             <span>
-                                Développeur font-end javascript, je suis passionné par le partage et les valeurs humaines au sein d’une entreprise.
+                                Développeur Front-End, spécialisé en JavaScript, je suis passionné par le partage et les valeurs humaines au sein d’une entreprise.
                             </span>
                         }
                         buttonProps={[

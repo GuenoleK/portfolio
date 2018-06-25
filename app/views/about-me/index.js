@@ -33,8 +33,8 @@ export class AboutMeView extends PureComponent {
         return(
             <div>
                 <h3>Ma vision d'un monde technologique</h3>
-                Développeur font-end javascript, je suis passionné par le partage et les valeurs humaines au sein d’une entreprise.<br/>
-                Dans ma vie personnelle, mais aussi au sein de mon environnement professionnel, je suis jovial, avenant, sérieux, drôle et persévérant.<br/>
+                Développeur Front-End, spécialisé en JavaScript, je suis passionné par le partage et les valeurs humaines au sein d’une entreprise.<br/>
+                Dans ma vie personnelle, comme dans mon environnement professionnel, je suis jovial, avenant, sérieux, drôle et persévérant.<br/>
                 Passionné par les nouvelles technologies, j’ai toujours voulu participer à cet univers en devenant développeur informatique. Aujourd’hui je suis pleinement acteur dans ce secteur en ayant fait d’une de mes passions mon métier. A travers ce métier, je peux vivre et véhiculer mes valeurs.<br/>
                 J’ai découvert que j’ai besoin de m’épanouir humainement dans l’environnement dans lequel je me trouve et de pouvoir y retrouver les valeurs que je prône. Que ce soit le partage, l’entraide ou encore la bienveillance, je retrouve tous ces éléments dans ce que je fais dans mon métier et dans les équipes dans lesquelles j’évolue.<br/><br/>
 
