@@ -87,7 +87,7 @@ class AchievementsTextsRender {
                 C’est à la base un des documents à fournir à la fin de la 2e année de master. Il sert, entre autres, en partie à valider le master.<br/>
                 Nous avions le choix de le faire soit avec un programme informatique (CMS : Content Managment System) qui permet de créer rapidement un site internet ou alors de le faire nous-même.<br/><br/>
 
-                J’ai décidé de me lancer ce challenge afin de tester mes compétences de développeur et ma créativité. Souhaitant me spécialiser dans le développement frontend, je me devais de relever ce défi.<br/>
+                J’ai décidé de me lancer ce challenge afin de tester mes compétences de développeur et ma créativité. Souhaitant me spécialiser dans le développement Front-End, je me devais de relever ce défi.<br/>
                 L’enjeu était donc de développer moi-même cet outil mais aussi de pouvoir le montrer aux yeux de tous afin d’être contacté directement via cette plateforme par des professionnels.<br/><br/>
 
                 J’ai été totalement seul à développer mon portfolio. Je me suis cependant aidé du langage de programmation et de librairies que je préfère. Soit le JavaScript accompagné des différentes librairies JavaScript qui m’ont permis de créer différents composants web et effets qui se trouvent sur le site.<br/><br/>

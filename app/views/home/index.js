@@ -45,7 +45,7 @@ export class HomeView extends PureComponent {
                     <Card 
                         content={
                             <span>
-                                Découvrez mes compétences acquises au fil des mes expériences
+                                Découvrez mes compétences acquises au fil de mes expériences
                             </span>}
                         buttonProps={[
                             {
